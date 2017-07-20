@@ -1,0 +1,105 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+	xmlns="sap.m">
+	<l:VerticalLayout
+		class="sapUiContentPadding"
+		width="100%">
+		<l:content>
+			<HBox
+					alignItems="End"
+					justifyContent="Center">
+				<core:Icon
+					src="sap-icon://lead-outdated"
+					size="600%"
+					color="#031E48">
+				</core:Icon>
+			</HBox>
+			<HBox
+					alignItems="Start"
+					justifyContent="Center">
+				<Text class="subHeader" text="Credit Count"/>
+			</HBox>
+		</l:content>
+	</l:VerticalLayout>
+	<l:Grid defaultSpan="L4 M6 S6" class="sapUiSmallMarginTop">
+		<l:content>
+ 
+			<!-- Third / Half width items -->
+ 
+			<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+				<headerToolbar>
+					<Toolbar height="3rem">
+						<Title text="Amazon"/>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<l:HorizontalLayout>
+						<Image src="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/98363ce3-e0d8-4abb-b808-a77050d3126d.png._CB304373939__SR285,285_.png" densityAware="false" width="100%" />
+					</l:HorizontalLayout>
+				</content>
+			</Panel>
+			<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+				<headerToolbar>
+					<Toolbar height="3rem">
+						<Title text="Amazon"/>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<l:HorizontalLayout>
+						<Image src="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/98363ce3-e0d8-4abb-b808-a77050d3126d.png._CB304373939__SR285,285_.png" densityAware="false" width="100%" />
+					</l:HorizontalLayout>
+				</content>
+			</Panel>
+			<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+				<headerToolbar>
+					<Toolbar height="3rem">
+						<Title text="Amazon"/>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<l:HorizontalLayout>
+						<Image src="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/98363ce3-e0d8-4abb-b808-a77050d3126d.png._CB304373939__SR285,285_.png" densityAware="false" width="100%" />
+					</l:HorizontalLayout>
+				</content>
+			</Panel>
+			<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+				<headerToolbar>
+					<Toolbar height="3rem">
+						<Title text="Amazon"/>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<l:HorizontalLayout>
+						<Image src="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/98363ce3-e0d8-4abb-b808-a77050d3126d.png._CB304373939__SR285,285_.png" densityAware="false" width="100%" />
+					</l:HorizontalLayout>
+				</content>
+			</Panel>
+			<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+				<headerToolbar>
+					<Toolbar height="3rem">
+						<Title text="Amazon"/>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<l:HorizontalLayout>
+						<Image src="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/98363ce3-e0d8-4abb-b808-a77050d3126d.png._CB304373939__SR285,285_.png" densityAware="false" width="100%" />
+					</l:HorizontalLayout>
+				</content>
+			</Panel>
+			<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+				<headerToolbar>
+					<Toolbar height="3rem">
+						<Title text="Amazon"/>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<l:HorizontalLayout>
+						<Image src="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/98363ce3-e0d8-4abb-b808-a77050d3126d.png._CB304373939__SR285,285_.png" densityAware="false" width="100%" />
+					</l:HorizontalLayout>
+				</content>
+			</Panel>
+		</l:content>
+	</l:Grid>
+</mvc:View>
