@@ -1,0 +1,80 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+	<VBox class="sapUiSmallMargin">
+		<f:Form id="FormChange354wideDual"
+			editable="true">
+			<f:title>
+				<core:Title text="Address" />
+			</f:title>
+			<f:layout>
+				<f:ResponsiveGridLayout
+					labelSpanXL="4"
+					labelSpanL="3"
+					labelSpanM="4"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="0"
+					emptySpanL="4"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="2"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer title="Account">
+					<f:formElements>
+						<f:FormElement label="Current Password">
+							<f:fields>
+								<Input value="" id="currentPassword"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="New Password">
+							<f:fields>
+								<Input value="" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Repeat New Password">
+							<f:fields>
+								<Input value=""/>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+				<f:FormContainer title="Personal Information">
+					<f:formElements>
+						<f:FormElement label="Gender">
+							<f:fields>
+								<Input value="" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Birthday">
+							<f:fields>
+								<Input value="" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Hobbys">
+							<f:fields>
+								<Input value="" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Interests">
+							<f:fields>
+								<Input value="" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Professions">
+							<f:fields>
+								<Input value="" />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+	</VBox>
+</core:FragmentDefinition>

@@ -1,0 +1,46 @@
+<core:FragmentDefinition
+	xmlns:core="sap.ui.core"
+	controllerName="storm.controller.Homepage.Homepage" 
+	xmlns:l="sap.ui.layout"
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" 
+	xmlns="sap.m">
+	<Popover
+		title="Credentials"
+		class="sapUiContentPadding"
+		placement="Bottom"
+		initialFocus="email"
+		afterClose="PopoverClose">
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button
+					id="RegistrationC"
+					text="Register"
+					press="handleRegister" />
+				<Button
+					id="CustomerLogin"
+					text="Customer Login"
+					press="handleCustomerLoginPress" />
+			</Toolbar>
+
+		</footer>
+	<Label text="Username" labelFor="usernameInput"/>
+			<Input
+				id="CustomerUsernameInput"
+				type="Text"
+				filterSuggests="false"
+				showSuggestion="false"
+				required="true"
+				placeholder="Enter username ..." />
+				
+	<Label text="Password" labelFor="passwordInput"/>
+			<Input
+				id="CustomerPasswordInput"
+				type="Password"
+				filterSuggests="false"
+				required="true"
+				placeholder="Enter password ..." />
+	</Popover>
+</core:FragmentDefinition>
