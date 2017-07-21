@@ -32,7 +32,7 @@ return Controller.extend("storm.controller.Homepage.Homepage", {
 	},
 
 	handleCustomerLoginPress: function(cEventCustomer) {
-		var sCustomerEmail = this._cPopover.getContent()[1]._lastValue;
+		/*var sCustomerEmail = this._cPopover.getContent()[1]._lastValue;
 		var sCustomerPassword = this._cPopover.getContent()[3]._lastValue;
 		var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 
@@ -56,8 +56,8 @@ return Controller.extend("storm.controller.Homepage.Homepage", {
 			}
 		});
 		this._cPopover.destroy();
-		this._cPopover = null;
-
+		this._cPopover = null;*/
+		this.getOwnerComponent().getTargets().display("userUi");
 	},
 	
 	PopoverClose: function() {
