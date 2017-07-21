@@ -9,7 +9,7 @@
 					<Button text="Customer Login" icon="sap-icon://manager" press="handleUserPopoverPress"/>
 				</headerContent>
 				<content>
-					<Carousel class="sapUiContentPadding" loop="true" height="40%" showPageIndicator="false">
+					<Carousel class="sapUiContentPadding" loop="true" height="25%" showPageIndicator="false">
 						<Image
 							src="https://m.media-amazon.com/images/G/03/music/universal/kw24/allungu_2017-06-08T12-56_d04d40_1051129_DE_MUSIC_HERO-6_BESTSELLER_08-06-2017_1500x300_1x._CB508240326_.jpg"
 							alt="Example picture of speakers"/>
