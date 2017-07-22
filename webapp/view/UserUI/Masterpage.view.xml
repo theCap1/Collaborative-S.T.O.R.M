@@ -21,7 +21,8 @@
 	        		select="handleRedeemPress"/>
 	        	<NavigationListItem 
 	        		text="My Vouchers"
-	        		id="vouchers"/>
+	        		id="vouchers"
+	        		select="handleVouchersPress"/>
 	        </NavigationListItem>
 	        <NavigationListItem
 	                text="Account"

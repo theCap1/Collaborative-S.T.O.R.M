@@ -4,10 +4,21 @@
 	xmlns="sap.m" 
 	xmlns:f="sap.ui.layout.form" 
 	xmlns:u="sap.ui.unified" 
+    xmlns:tnt="sap.tnt"
+    xmlns:core="sap.ui.core"
 	controllerName="storm.controller.UserUI.App"
 	displayBlock="true" 
-	height="101%">
-	<Carousel class="sapUiContentPadding" loop="true" height="40%" showPageIndicator="false">
+	height="43rem">
+    <tnt:ToolHeader>
+        <ToolbarSpacer />
+        <ToolbarSpacer />
+        <Button text="Logout" type="Transparent" press="logout">
+            <layoutData>
+                <OverflowToolbarLayoutData priority="NeverOverflow" />
+            </layoutData>
+        </Button>
+    </tnt:ToolHeader>
+	<Carousel class="sapUiContentPadding" loop="true" height="35%" showPageIndicator="false">
 		<Image src="https://m.media-amazon.com/images/G/03/music/universal/kw24/allungu_2017-06-08T12-56_d04d40_1051129_DE_MUSIC_HERO-6_BESTSELLER_08-06-2017_1500x300_1x._CB508240326_.jpg"/>
 		<Image src="https://m.media-amazon.com/images/G/03/kindle/merch/2017/campaigns/lucida/june/b_color_test2-gw-d-de-1500x300._CB508310086_.jpg" alt="Example picture of USB flash drive"/>
 		<Image src="https://m.media-amazon.com/images/G/03/music/universal/kw24/allungu_2017-06-08T12-56_d04d40_1051129_DE_MUSIC_HERO-6_BESTSELLER_08-06-2017_1500x300_1x._CB508240326_.jpg"/>

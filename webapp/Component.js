@@ -20,12 +20,12 @@ sap.ui.define([
 					}
 				},
 				
-				rootView: "storm.view.Homepage.Homepage",
+				rootView: "storm.view.UserUI.App",
 					routing: {
 						config: {
 							targetsClass: "sap.m.routing.Targets",
 							viewPath: "storm.view",
-							controlId: "app",
+							controlId: "App",
 							controlAggregation: "pages",
 							viewType: "XML"
 						},
@@ -45,7 +45,7 @@ sap.ui.define([
 				
 			init: function (){
 				UIComponent.prototype.init.apply(this, arguments);
-				this.getTargets().display("login");				
+				this.getTargets().display("userUi");				
 			}
 		});
 	});

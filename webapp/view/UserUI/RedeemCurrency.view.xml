@@ -2,7 +2,8 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:core="sap.ui.core"
 	xmlns:l="sap.ui.layout"
-	xmlns="sap.m">
+	xmlns="sap.m"
+	height="100%">
 	<l:VerticalLayout
 		class="sapUiContentPadding"
 		width="100%">

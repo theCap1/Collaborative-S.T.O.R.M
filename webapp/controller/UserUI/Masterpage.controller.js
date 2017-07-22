@@ -24,6 +24,10 @@ sap.ui.define([
 			this._changeView("PersonalInfo"); 
 		},
 		
+		handleVouchersPress : function () {
+			this._changeView("Vouchers");	
+		},
+		
 		_changeView: function (sViewName){
 			var oDetailPage = this.getView().getParent().getParent().getParent().getCurrentDetailPage();
 			
