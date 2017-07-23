@@ -109,37 +109,6 @@
 					</GenericTile>
 				</tiles>
 			</SlideTile>
-			<SlideTile class="sapUiResponsiveMargin" transitionTime="250" displayTime="2500">
-				<tiles>
-					<GenericTile
-						backgroundImage="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/98363ce3-e0d8-4abb-b808-a77050d3126d.png._CB304373939__SR285,285_.png"
-						frameType="TwoByOne" press="pressOnTileOne">
-						<tileContent>
-							<TileContent footer="August 21, 2016">
-								<content>
-									<NewsContent
-										contentText="Wind Map: Monitoring Real-Time and Forecasted Wind Conditions across the Globe"
-										subheader="Today, SAP News">
-									</NewsContent>
-								</content>
-							</TileContent>
-						</tileContent>
-					</GenericTile>
-					<GenericTile
-						backgroundImage="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/98363ce3-e0d8-4abb-b808-a77050d3126d.png._CB304373939__SR285,285_.png"
-						frameType="TwoByOne">
-						<tileContent>
-							<TileContent footer="August 21, 2016">
-								<content>
-									<NewsContent
-										subheader="New Vouchers">
-									</NewsContent>
-								</content>
-							</TileContent>
-						</tileContent>
-					</GenericTile>
-				</tiles>
-			</SlideTile>
 		</items>
 		<layoutData>
 			<l:GridData span="L6 M12 S12" />

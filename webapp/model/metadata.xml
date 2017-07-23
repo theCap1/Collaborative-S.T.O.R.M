@@ -19,8 +19,8 @@
             </EntityType>
             <ComplexType Name="LocationDetail" />
             <EntityContainer Name="Vouchers" m:IsDefaultEntityContainer="true">
-                <EntitySet Name="Vouchers" EntityType="Vouchers.Models.Voucher" />
-                <FunctionImport Name="FindVouchers" EntitySet="Vouchers" ReturnType="Collection(Vouchers.Models.Voucher)" m:HttpMethod="GET" />
+                <EntitySet Name="VoucherSet" EntityType="Vouchers.Models.Voucher" />
+                <FunctionImport Name="FindVouchers" EntitySet="VoucherSet" ReturnType="Collection(Vouchers.Models.Voucher)" m:HttpMethod="GET" />
             </EntityContainer>
         </Schema>
     </edmx:DataServices>

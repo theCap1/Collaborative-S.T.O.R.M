@@ -1,4 +1,5 @@
 <mvc:View
+	controllerName="storm.controller.UserUI.Vouchers"
 	height="100%"
 	xmlns:l="sap.ui.layout"
 	xmlns:core="sap.ui.core"
@@ -6,36 +7,27 @@
 	xmlns="sap.m">
 	<Page
 		showHeader="false" >
-		<subHeader>
-			<Toolbar>
-				<SearchField
-					liveChange="onSearch"
-					width="100%" />
-			</Toolbar>
-		</subHeader>
 		<content>
 			<List
 				id="list"
-				items="{/ProductCollection}"
+				items="{/vouchers}"
 				selectionChange="onSelectionChange"
-				mode="MultiSelect"
 				includeItemInSelection="true" >
-				<infoToolbar>
-					<Toolbar
-						visible="false"
-						id="idInfoToolbar" >
-						<Label id="idFilterLabel" />
-					</Toolbar>
-				</infoToolbar>
 				<items>
 					<StandardListItem
-						title="{Name}"
-						description="{ProductId}"
-						icon="{ProductPicUrl}"
-						iconDensityAware="false"
-						iconInset="false" />
+						title="{description}"
+						description="{voucher_code}"/>
 				</items>
 			</List>
 		</content>
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button id="edit" text="Edit" press="handleEditPress" />
+					<Button id="remove" text="Remove" type="Reject" visible="false" press="handleRemovePress" />
+					<Button id="done" text="Done" visible="false" press="handleDonePress" />
+				</contentRight>
+			</Bar>
+		</footer>
 	</Page>
 </mvc:View>
