@@ -15,17 +15,29 @@ sap.ui.define([
 		handleHomePress: function () {
 			this._changeView("Home");
 		},
+		
+		handleRewardsPress: function(){
+			
+			var item=this.getView().byId("rewards");
+			var expanded=item.getExpanded();
+			
+			if (expanded){
+				item.setExpanded(false); 
+			}else{
+				item.setExpanded(true); 
+			}
+		},
  
 		handleRedeemPress : function () {
 			this._changeView("RedeemCurrency"); 
 		},
- 
-		handleAccountPress : function () {
-			this._changeView("PersonalInfo"); 
-		},
 		
 		handleVouchersPress : function () {
 			this._changeView("Vouchers");	
+		},
+ 
+		handleAccountPress : function () {
+			this._changeView("PersonalInfo"); 
 		},
 		
 		_changeView: function (sViewName){

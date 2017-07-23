@@ -14,7 +14,10 @@
 	        		select="handleHomePress"/>
 	        <NavigationListItem
 	                text="Rewards"
-	                icon="sap-icon://retail-store-manager">
+	                icon="sap-icon://retail-store-manager"
+	                id="rewards"
+	                select="handleRewardsPress"
+	                expanded="false">
 	        	<NavigationListItem
 	        		text="Redeem"
 	        		id="RedeemCurrency"
@@ -26,11 +29,11 @@
 	        </NavigationListItem>
 	        <NavigationListItem
 	                text="Account"
-	                icon="sap-icon://retail-store-manager"
+	                icon="sap-icon://employee-pane"
 	                select="handleAccountPress"/>
 	        <NavigationListItem
 	                text="Settings"
-	                icon="sap-icon://retail-store-manager"/>
+	                icon="sap-icon://settings"/>
 	        <NavigationListItem
 	                text="Contact us"
 	                icon="sap-icon://retail-store-manager"/>
