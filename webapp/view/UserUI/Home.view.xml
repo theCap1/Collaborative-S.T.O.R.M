@@ -81,31 +81,19 @@
 			<SlideTile class="sapUiResponsiveMargin">
 				<tiles>
 					<GenericTile
-						backgroundImage="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/98363ce3-e0d8-4abb-b808-a77050d3126d.png._CB304373939__SR285,285_.png"
-						frameType="TwoByOne" press="pressOnTileOne">
-						<tileContent>
-							<TileContent footer="August 21, 2016">
-								<content>
-									<NewsContent
-										contentText="SAP Unveils Powerful New Player Comparision Tool Exclusively on NFL.com"
-										subheader="Today, SAP News">
-									</NewsContent>
-								</content>
-							</TileContent>
-						</tileContent>
+						backgroundImage="https://cdn.fashiola.com.br/I4641/360x180/nike_1.jpg"
+						frameType="TwoByOne"
+						header="New Vouchers">
 					</GenericTile>
 					<GenericTile
-						backgroundImage="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/98363ce3-e0d8-4abb-b808-a77050d3126d.png._CB304373939__SR285,285_.png"
-						frameType="TwoByOne" press="pressOnTileTwo">
-						<tileContent>
-							<TileContent footer="August 21, 2016">
-								<content>
-									<NewsContent
-										subheader="New Vouchers">
-									</NewsContent>
-								</content>
-							</TileContent>
-						</tileContent>
+						backgroundImage="http://i1.wp.com/tricksandguides.com/wp-content/uploads/2016/11/amazon-voucher.jpg?resize=360%2C180"
+						frameType="TwoByOne"
+						header="New Vouchers">
+					</GenericTile>
+					<GenericTile
+						backgroundImage="//insideflyer.co.uk/wp-content/uploads/2016/12/iTunes-logo-1-360x180.jpg"
+						frameType="TwoByOne"
+						header="New Vouchers">
 					</GenericTile>
 				</tiles>
 			</SlideTile>
