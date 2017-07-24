@@ -18,6 +18,10 @@ sap.ui.define([
  
 			// Set the initial form to be the display one
 			this._showFormFragment("DisplayPersonalInfo");
+			
+			var oModel = new JSONModel();
+			oModel.loadData("model/Interests.json");
+			this.getView().setModel(oModel);
 		},
  
 		onExit : function () {
@@ -95,6 +99,18 @@ sap.ui.define([
  
 			oPage.removeAllContent();
 			oPage.insertContent(this._getFormFragment(sFragmentName));
+		},
+ 
+		handleChange: function (oEvent) {
+			var oDP = oEvent.oSource;
+			var bValid = oEvent.getParameter("valid");
+			this._iEvent++;
+ 
+			if (bValid) {
+				oDP.setValueState(sap.ui.core.ValueState.None);
+			} else {
+				oDP.setValueState(sap.ui.core.ValueState.Error);
+			}
 		}
  
 	});

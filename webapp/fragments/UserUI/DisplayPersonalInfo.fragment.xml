@@ -26,8 +26,58 @@
 					singleContainerFullSize="false" />
 			</f:layout>
 			<f:formContainers>
+				<f:FormContainer title="Account">
+					<f:formElements>
+						<f:FormElement label="Mail Address">
+							<f:fields>
+								<Text value="kack.puh@sap.com"/>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+				
+				<f:FormContainer title="Address">
+					<f:formElements>
+						<f:FormElement label="Street">
+							<f:fields>
+								<Text value=""/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Number">
+							<f:fields>
+								<Text value=""/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="ZIP Code">
+							<f:fields>
+								<Text value=""/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="City">
+							<f:fields>
+								<Text value=""/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="State">
+							<f:fields>
+								<Text value=""/>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+				
 				<f:FormContainer title="Personal Information">
 					<f:formElements>
+						<f:FormElement label="Firstname">
+							<f:fields>
+								<Text text="" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Lastname">
+							<f:fields>
+								<Text text="" />
+							</f:fields>
+						</f:FormElement>
 						<f:FormElement label="Gender">
 							<f:fields>
 								<Text text="" />
@@ -38,17 +88,7 @@
 								<Text text="" />
 							</f:fields>
 						</f:FormElement>
-						<f:FormElement label="Hobbys">
-							<f:fields>
-								<Text text="" />
-							</f:fields>
-						</f:FormElement>
 						<f:FormElement label="Interests">
-							<f:fields>
-								<Text text="" />
-							</f:fields>
-						</f:FormElement>
-						<f:FormElement label="Professions">
 							<f:fields>
 								<Text text="" />
 							</f:fields>

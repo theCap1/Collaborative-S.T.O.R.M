@@ -10,8 +10,8 @@
 			<Bar>
 				<contentRight>
 					<Button id="edit" text="Edit" press="handleEditPress" />
-					<Button id="save" text="Save" type="Emphasized" visible="false" press="handleSavePress" />
 					<Button id="cancel" text="Cancel" visible="false" press="handleCancelPress" />
+					<Button id="save" text="Save" type="Accept" visible="false" press="handleSavePress" />
 				</contentRight>
 			</Bar>
 		</footer>

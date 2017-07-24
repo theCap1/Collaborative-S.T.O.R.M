@@ -1,13 +1,14 @@
 <core:FragmentDefinition
+	controllerName="storm.controller.UserUI.PersonalInfo"
 	xmlns="sap.m"
 	xmlns:l="sap.ui.layout"
 	xmlns:f="sap.ui.layout.form"
 	xmlns:core="sap.ui.core">
 	<VBox class="sapUiSmallMargin">
-		<f:Form id="FormChange354wideDual"
+		<f:Form id="FormChange"
 			editable="true">
 			<f:title>
-				<core:Title text="Address" />
+				<core:Title text="Your Data" />
 			</f:title>
 			<f:layout>
 				<f:ResponsiveGridLayout
@@ -28,48 +29,96 @@
 			<f:formContainers>
 				<f:FormContainer title="Account">
 					<f:formElements>
+						<f:FormElement label="Mail Address">
+							<f:fields>
+								<Input value="kack.puh@sap.com" id="mail" type="Email"/>
+							</f:fields>
+						</f:FormElement>
 						<f:FormElement label="Current Password">
 							<f:fields>
-								<Input value="" id="currentPassword"/>
+								<Input value="" id="currentPassword" type="Password"/>
 							</f:fields>
 						</f:FormElement>
 						<f:FormElement label="New Password">
 							<f:fields>
-								<Input value="" />
+								<Input value=""  type="Password"/>
 							</f:fields>
 						</f:FormElement>
 						<f:FormElement label="Repeat New Password">
+							<f:fields>
+								<Input value="" type="Password"/>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+				
+				<f:FormContainer title="Address">
+					<f:formElements>
+						<f:FormElement label="Street">
+							<f:fields>
+								<Input value=""/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Number">
+							<f:fields>
+								<Input value="" type="Number"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="ZIP Code">
+							<f:fields>
+								<Input value="" type="Number"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="City">
+							<f:fields>
+								<Input value=""/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="State">
 							<f:fields>
 								<Input value=""/>
 							</f:fields>
 						</f:FormElement>
 					</f:formElements>
 				</f:FormContainer>
+				
 				<f:FormContainer title="Personal Information">
 					<f:formElements>
+						<f:FormElement label="Firstname">
+							<f:fields>
+								<Input value="Kack"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Lastname">
+							<f:fields>
+								<Input value="Puh"/>
+							</f:fields>
+						</f:FormElement>
 						<f:FormElement label="Gender">
 							<f:fields>
-								<Input value="" />
+								<RadioButtonGroup columns="3" width="100%">
+									<buttons>
+										<RadioButton id="RB1" text="Female"/>
+										<RadioButton id="RB2" text="Male"/>
+										<RadioButton id="RB3" text="Other"/>
+									</buttons>
+								</RadioButtonGroup>
 							</f:fields>
 						</f:FormElement>
 						<f:FormElement label="Birthday">
 							<f:fields>
-								<Input value="" />
-							</f:fields>
-						</f:FormElement>
-						<f:FormElement label="Hobbys">
-							<f:fields>
-								<Input value="" />
+								<Input value="" type="Date"/>
 							</f:fields>
 						</f:FormElement>
 						<f:FormElement label="Interests">
 							<f:fields>
-								<Input value="" />
-							</f:fields>
-						</f:FormElement>
-						<f:FormElement label="Professions">
-							<f:fields>
-								<Input value="" />
+								<MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish"
+									items="{
+										path: '/interests',
+										sorter: { path: 'description' }
+									}">
+									<core:Item key="{description}" text="{description}" />
+								</MultiComboBox>
 							</f:fields>
 						</f:FormElement>
 					</f:formElements>
