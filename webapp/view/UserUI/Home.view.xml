@@ -10,7 +10,7 @@
 			<Panel class="sapUiResponsiveMargin" width="auto" height="11rem" accessibleRole="Region" backgroundDesign="Solid">
 				<headerToolbar>
 					<Toolbar class="whitePanelHeader" height="3rem">
-						<Title text="Wilkommen + Name"/>
+						<Title text="Welcome {/user/0/firstname}"/>
 					</Toolbar>
 				</headerToolbar>
 				<content>
@@ -31,7 +31,7 @@
 			<Panel class="sapUiResponsiveMargin" width="auto" height="11rem" accessibleRole="Region" backgroundDesign="Solid">
 				<headerToolbar>
 					<Toolbar class="whitePanelHeader" height="3rem">
-						<Title text="Account Balance"/>
+						<Title text="Account Balance "/>
 					</Toolbar>
 				</headerToolbar>
 				<content>
@@ -39,7 +39,7 @@
 					src="sap-icon://loan"
 					size="3rem"
 					color="#031E48"/>
-					<Text class="subHeader" text=" Credit Count"/>
+					<Text class="subHeader" text="{/user/0/internalCurrencyCount}"/>
 				</content>
 				<layoutData>
 					<l:GridData span="L6 M12 S12" />

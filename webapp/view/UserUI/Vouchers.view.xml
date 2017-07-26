@@ -10,13 +10,14 @@
 		<content>
 			<List
 				id="list"
-				items="{/vouchers}"
+				items="{/voucher}"
 				selectionChange="onSelectionChange"
 				includeItemInSelection="true" >
 				<items>
 					<StandardListItem
 						title="{description}"
-						description="{voucher_code}"/>
+						description="{voucher_code}"
+						icon="data:image/bmp;base64, {img}"/>
 				</items>
 			</List>
 		</content>

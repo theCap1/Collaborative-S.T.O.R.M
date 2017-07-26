@@ -8,11 +8,22 @@ sap.ui.define([
  
 	return Controller.extend("storm.controller.UserUI.Vouchers", {
  
-		onInit: function (oEvent) {
-			
-			var oModel = new JSONModel();
-			oModel.loadData("model/Vouchers.json");
-			this.getView().setModel(oModel);
+		onInit: function () {
+				$.ajax({
+					url:"php/User/getUserVoucher.php",
+					type:"GET",
+					context: this,
+					data: {
+						email: "bla@bla.de"
+					},
+					success: function handleSuccess(response){
+						var oModel = new JSONModel();
+						oModel.setJSON(response);
+						this.getView().setModel(oModel);
+					},
+					error:function handleError(){
+					}
+				});
 		},
 		
 		handleEditPress:function(){

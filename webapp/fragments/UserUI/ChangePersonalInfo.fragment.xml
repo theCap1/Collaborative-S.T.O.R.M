@@ -11,27 +11,14 @@
 				<core:Title text="Your Data" />
 			</f:title>
 			<f:layout>
-				<f:ResponsiveGridLayout
-					labelSpanXL="4"
-					labelSpanL="3"
-					labelSpanM="4"
-					labelSpanS="12"
-					adjustLabelSpan="false"
-					emptySpanXL="0"
-					emptySpanL="4"
-					emptySpanM="0"
-					emptySpanS="0"
-					columnsXL="2"
-					columnsL="1"
-					columnsM="1"
-					singleContainerFullSize="false" />
+				<f:GridLayout/>
 			</f:layout>
 			<f:formContainers>
 				<f:FormContainer title="Account">
 					<f:formElements>
 						<f:FormElement label="Mail Address">
 							<f:fields>
-								<Input value="kack.puh@sap.com" id="mail" type="Email"/>
+								<Input value="{/user/0/email}" id="mail" type="Email"/>
 							</f:fields>
 						</f:FormElement>
 						<f:FormElement label="Current Password">
@@ -86,38 +73,39 @@
 					<f:formElements>
 						<f:FormElement label="Firstname">
 							<f:fields>
-								<Input value="Kack"/>
+								<Input value="{/user/0/firstname}"/>
 							</f:fields>
 						</f:FormElement>
 						<f:FormElement label="Lastname">
 							<f:fields>
-								<Input value="Puh"/>
+								<Input value="{/user/0/lastname}"/>
 							</f:fields>
 						</f:FormElement>
 						<f:FormElement label="Gender">
 							<f:fields>
-								<RadioButtonGroup columns="3" width="100%">
+								<RadioButtonGroup columns="3" width="100%" id="radioButtons">
 									<buttons>
-										<RadioButton id="RB1" text="Female"/>
-										<RadioButton id="RB2" text="Male"/>
-										<RadioButton id="RB3" text="Other"/>
+										<RadioButton id="Female" text="Female"/>
+										<RadioButton id="Male" text="Male"/>
+										<RadioButton id="Other" text="Other"/>
 									</buttons>
 								</RadioButtonGroup>
 							</f:fields>
 						</f:FormElement>
 						<f:FormElement label="Birthday">
 							<f:fields>
-								<Input value="" type="Date"/>
+								<DatePicker
+								id="DP2"
+								value="{/user/0/birthday}" valueFormat="dd-MM-yyyy" displayFormat="long"
+								change="handleChange"
+								class="sapUiSmallMarginBottom"/>
 							</f:fields>
 						</f:FormElement>
 						<f:FormElement label="Interests">
 							<f:fields>
-								<MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish"
-									items="{
-										path: '/interests',
-										sorter: { path: 'description' }
-									}">
-									<core:Item key="{description}" text="{description}" />
+								<MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" id="comboBreaker"
+									items="{/interest_category}">
+									<core:Item key="{name}" text="{name}" />
 								</MultiComboBox>
 							</f:fields>
 						</f:FormElement>

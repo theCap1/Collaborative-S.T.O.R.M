@@ -23,8 +23,8 @@
 		},
 		"deviceTypes": {
 			"desktop": true,
-			"tablet": true,
-			"phone": true
+			"tablet": false,
+			"phone": false
 		},
 		"supportedThemes": ["sap_hcb", "sap_bluecrystal", "sap_belize"]
 	},

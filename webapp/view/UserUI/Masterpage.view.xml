@@ -36,10 +36,10 @@
 	                icon="sap-icon://settings"/>
 	        <NavigationListItem
 	                text="Contact us"
-	                icon="sap-icon://retail-store-manager"/>
+	                icon="sap-icon://letter"/>
 	        <NavigationListItem
 	                text="Help"
-	                icon="sap-icon://retail-store-manager"/>
+	                icon="sap-icon://question-mark"/>
 	    </NavigationList>
     </m:Page>
 </mvc:View>

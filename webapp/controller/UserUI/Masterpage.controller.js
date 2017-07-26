@@ -45,7 +45,7 @@ sap.ui.define([
 			
 			oDetailPage.removeAllContent();
 			
-			var oView = sap.ui.view({/*id:sViewName, */viewName:"storm.view.UserUI." + sViewName, type:sap.ui.core.mvc.ViewType.XML});
+			var oView = sap.ui.view({viewName:"storm.view.UserUI." + sViewName, type:sap.ui.core.mvc.ViewType.XML});
 			
 			oDetailPage.insertContent(oView);
 		}
