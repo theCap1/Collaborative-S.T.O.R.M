@@ -1,0 +1,35 @@
+<mvc:View controllerName="ShopScreenStormShopScreen.controller.RFID_Reader" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<App id="app">
+		<pages>
+			<Page>
+				<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+					<headerToolbar>
+						<Toolbar height="3rem">
+							<Title text="Simulated RFID Reader"/>
+						</Toolbar>
+					</headerToolbar>
+					<content>
+						<l:VerticalLayout>
+							<Label text="shop:"/>
+							<ComboBox id="comboShops"
+								items="{
+									path: '/shop'
+								}">
+								<core:Item key="{id}" text="{name}" />
+							</ComboBox>
+							<Label text="user:"/>
+							<ComboBox id="comboUser"
+								items="{
+									path: '/user'
+								}">
+								<core:Item key="{email}" text="{firstname} {lastname}" />
+							</ComboBox>
+							<Button text="Simulate" press="onSimulate" type="Emphasized"/>
+						</l:VerticalLayout>
+					</content>
+				</Panel>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
