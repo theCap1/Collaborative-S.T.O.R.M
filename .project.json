@@ -1,0 +1,8 @@
+{
+  "mockpreview": {
+    "loadJSONFiles": true,
+    "mockUri": "",
+    "metadataFilePath": "storm/model",
+    "loadCustomRequests": false
+  }
+}

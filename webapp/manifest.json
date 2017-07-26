@@ -23,18 +23,13 @@
 		},
 		"deviceTypes": {
 			"desktop": true,
-			"tablet": true,
-			"phone": true
+			"tablet": false,
+			"phone": false
 		},
 		"supportedThemes": ["sap_hcb", "sap_bluecrystal", "sap_belize"]
 	},
 	"sap.ui5": {
 		"_version": "1.2.0",
-		"rootView": {
-			"viewName": "storm.view.Homepage.Homepage",
-			"type": "XML",
-			"id": "app"
-		},
 		"handleValidation": true,
 		"dependencies": {
 			"minUI5Version": "1.36.0",
@@ -50,41 +45,6 @@
 		"contentDensities": {
 			"compact": true,
 			"cozy": true
-		},
-		"routing": {
-			"config": {
-				"viewLevel": 1,
-				"controlId": "app"
-			},
-			"routes": [{
-				"name": "homepage",
-				"pattern": "",
-				"titleTarget": "",
-				"greedy": false,
-				"target": ["homepage"]
-			}, {
-				"name": "UserUI",
-				"pattern": "",
-				"titleTarget": "",
-				"greedy": false,
-				"target": ["UserUI"]
-			}],
-			"targets": {
-				"homepage": {
-					"viewType": "XML",
-					"transition": "slide",
-					"clearAggregation": true,
-					"viewName": "Homepage",
-					"viewLevel": 1
-				},
-				"UserUI": {
-					"viewType": "XML",
-					"transition": "slide",
-					"clearAggregation": true,
-					"viewName": "App",
-					"viewLevel": 2
-				}
-			}
 		}
 	}
 }

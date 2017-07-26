@@ -19,13 +19,33 @@ sap.ui.define([
 						]
 					}
 				},
-				init: function (){
-					UIComponent.prototype.init.apply(this, arguments);
-					
-					this.getRouter().initialize();
-					
-				}
+				
+				rootView: "storm.view.UserUI.App",
+					routing: {
+						config: {
+							targetsClass: "sap.m.routing.Targets",
+							viewPath: "storm.view",
+							controlId: "App",
+							controlAggregation: "pages",
+							viewType: "XML"
+						},
+						targets: {
+							login: {
+								viewName: "Homepage.Homepage",
+								viewLevel: 0
+							},
+							userUi: {
+								viewName: "UserUI.App",
+								viewLevel: 1
+							}
+						}
+					}
+			},
+
+				
+			init: function (){
+				UIComponent.prototype.init.apply(this, arguments);
+				this.getTargets().display("userUi");				
 			}
 		});
-
 	});

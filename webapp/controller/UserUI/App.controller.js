@@ -9,6 +9,9 @@ sap.ui.define([
 
 		return Controller.extend("storm.controller.UserUI.App", {
 			afterRender: function() {
+			},
+			logout: function() {
+				this.getOwnerComponent().getTargets().display("login");
 			}
 		});
 	});

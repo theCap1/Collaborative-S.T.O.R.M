@@ -15,9 +15,25 @@ sap.ui.define([
 		handleHomePress: function () {
 			this._changeView("Home");
 		},
+		
+		handleRewardsPress: function(){
+			
+			var item=this.getView().byId("rewards");
+			var expanded=item.getExpanded();
+			
+			if (expanded){
+				item.setExpanded(false); 
+			}else{
+				item.setExpanded(true); 
+			}
+		},
  
 		handleRedeemPress : function () {
 			this._changeView("RedeemCurrency"); 
+		},
+		
+		handleVouchersPress : function () {
+			this._changeView("Vouchers");	
 		},
  
 		handleAccountPress : function () {
@@ -29,7 +45,7 @@ sap.ui.define([
 			
 			oDetailPage.removeAllContent();
 			
-			var oView = sap.ui.view({/*id:sViewName, */viewName:"storm.view.UserUI." + sViewName, type:sap.ui.core.mvc.ViewType.XML});
+			var oView = sap.ui.view({viewName:"storm.view.UserUI." + sViewName, type:sap.ui.core.mvc.ViewType.XML});
 			
 			oDetailPage.insertContent(oView);
 		}

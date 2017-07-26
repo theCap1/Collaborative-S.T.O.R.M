@@ -1,0 +1,117 @@
+{
+	"vouchers": [
+	{
+		"voucher_code": "fe4ge3j8hc3ni8g6y2q1",
+		"name": "amz_20_euro",
+		"dateAquired": "/Date(1499292000000)/",
+		"description": "20€ Amazon Voucher",
+		"requiredPoints": "2000"
+	}, {
+		"voucher_code": "fe4ge3j8hc312346y2q1",
+		"name": "amz_10_euro",
+		"dateAquired": "/Date(1500415200000)/",
+		"description": "10€ Amazon Voucher",
+		"requiredPoints": "1000"
+	}, {
+		"voucher_code": "voucher_code 1",
+		"name": "name 1",
+		"dateAquired": "/Date(1516291125000)/",
+		"description": "description 1",
+		"requiredPoints": {},
+		"__metadata": {
+			"uri": "Vouchers('name%201')",
+			"type": "Vouchers.Models.Voucher"
+		}
+	}, {
+		"voucher_code": "voucher_code 2",
+		"name": "name 2",
+		"dateAquired": "/Date(1288364325000)/",
+		"description": "description 2",
+		"requiredPoints": {},
+		"__metadata": {
+			"uri": "Vouchers('name%202')",
+			"type": "Vouchers.Models.Voucher"
+		}
+	}, {
+		"voucher_code": "voucher_code 3",
+		"name": "name 3",
+		"dateAquired": "/Date(1536332325000)/",
+		"description": "description 3",
+		"requiredPoints": {},
+		"__metadata": {
+			"uri": "Vouchers('name%203')",
+			"type": "Vouchers.Models.Voucher"
+		}
+	}, {
+		"voucher_code": "voucher_code 4",
+		"name": "name 4",
+		"dateAquired": "/Date(1130597925000)/",
+		"description": "description 4",
+		"requiredPoints": {},
+		"__metadata": {
+			"uri": "Vouchers('name%204')",
+			"type": "Vouchers.Models.Voucher"
+		}
+	}, {
+		"voucher_code": "voucher_code 5",
+		"name": "name 5",
+		"dateAquired": "/Date(1203955125000)/",
+		"description": "description 5",
+		"requiredPoints": {},
+		"__metadata": {
+			"uri": "Vouchers('name%205')",
+			"type": "Vouchers.Models.Voucher"
+		}
+	}, {
+		"voucher_code": "voucher_code 6",
+		"name": "name 6",
+		"dateAquired": "/Date(1493650725000)/",
+		"description": "description 6",
+		"requiredPoints": {},
+		"__metadata": {
+			"uri": "Vouchers('name%206')",
+			"type": "Vouchers.Models.Voucher"
+		}
+	}, {
+		"voucher_code": "voucher_code 7",
+		"name": "name 7",
+		"dateAquired": "/Date(1360511925000)/",
+		"description": "description 7",
+		"requiredPoints": {},
+		"__metadata": {
+			"uri": "Vouchers('name%207')",
+			"type": "Vouchers.Models.Voucher"
+		}
+	}, {
+		"voucher_code": "voucher_code 8",
+		"name": "name 8",
+		"dateAquired": "/Date(1515772725000)/",
+		"description": "description 8",
+		"requiredPoints": {},
+		"__metadata": {
+			"uri": "Vouchers('name%208')",
+			"type": "Vouchers.Models.Voucher"
+		}
+	}, {
+		"voucher_code": "voucher_code 9",
+		"name": "name 9",
+		"dateAquired": "/Date(1565535525000)/",
+		"description": "description 9",
+		"requiredPoints": {},
+		"__metadata": {
+			"uri": "Vouchers('name%209')",
+			"type": "Vouchers.Models.Voucher"
+		}
+	}, {
+		"voucher_code": "voucher_code 10",
+		"name": "name 10",
+		"dateAquired": "/Date(1483718325000)/",
+		"description": "description 10",
+		"requiredPoints": {},
+		"__metadata": {
+			"uri": "Vouchers('name%2010')",
+			"type": "Vouchers.Models.Voucher"
+		}
+	}
+	]
+}

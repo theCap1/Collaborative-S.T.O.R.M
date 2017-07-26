@@ -1,8 +1,10 @@
 <mvc:View
+	controllerName="storm.controller.UserUI.RedeemCurrency"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:core="sap.ui.core"
 	xmlns:l="sap.ui.layout"
-	xmlns="sap.m">
+	xmlns="sap.m"
+	height="100%">
 	<l:VerticalLayout
 		class="sapUiContentPadding"
 		width="100%">
@@ -19,7 +21,7 @@
 			<HBox
 					alignItems="Start"
 					justifyContent="Center">
-				<Text class="subHeader" text="Credit Count"/>
+				<Text class="subHeader" id="accBalance"/>
 			</HBox>
 		</l:content>
 	</l:VerticalLayout>
@@ -31,72 +33,72 @@
 			<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
 				<headerToolbar>
 					<Toolbar height="3rem">
-						<Title text="Amazon"/>
+						<Title id="voucher0_title"/>
 					</Toolbar>
 				</headerToolbar>
 				<content>
 					<l:HorizontalLayout>
-						<Image src="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/98363ce3-e0d8-4abb-b808-a77050d3126d.png._CB304373939__SR285,285_.png" densityAware="false" width="100%" />
+						<Image id="voucher0_img"  densityAware="false" width="100%" />
 					</l:HorizontalLayout>
 				</content>
 			</Panel>
 			<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
 				<headerToolbar>
 					<Toolbar height="3rem">
-						<Title text="Amazon"/>
+						<Title id="voucher1_title"/>
 					</Toolbar>
 				</headerToolbar>
 				<content>
 					<l:HorizontalLayout>
-						<Image src="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/98363ce3-e0d8-4abb-b808-a77050d3126d.png._CB304373939__SR285,285_.png" densityAware="false" width="100%" />
+						<Image id="voucher1_img"  densityAware="false" width="100%" />
 					</l:HorizontalLayout>
 				</content>
 			</Panel>
 			<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
 				<headerToolbar>
 					<Toolbar height="3rem">
-						<Title text="Amazon"/>
+						<Title id="voucher2_title"/>
 					</Toolbar>
 				</headerToolbar>
 				<content>
 					<l:HorizontalLayout>
-						<Image src="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/98363ce3-e0d8-4abb-b808-a77050d3126d.png._CB304373939__SR285,285_.png" densityAware="false" width="100%" />
+						<Image id="voucher2_img"  densityAware="false" width="100%" />
 					</l:HorizontalLayout>
 				</content>
 			</Panel>
 			<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
 				<headerToolbar>
 					<Toolbar height="3rem">
-						<Title text="Amazon"/>
+						<Title id="voucher3_title"/>
 					</Toolbar>
 				</headerToolbar>
 				<content>
 					<l:HorizontalLayout>
-						<Image src="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/98363ce3-e0d8-4abb-b808-a77050d3126d.png._CB304373939__SR285,285_.png" densityAware="false" width="100%" />
+						<Image id="voucher3_img"  densityAware="false" width="100%" />
 					</l:HorizontalLayout>
 				</content>
 			</Panel>
 			<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
 				<headerToolbar>
 					<Toolbar height="3rem">
-						<Title text="Amazon"/>
+						<Title id="voucher4_title"/>
 					</Toolbar>
 				</headerToolbar>
 				<content>
 					<l:HorizontalLayout>
-						<Image src="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/98363ce3-e0d8-4abb-b808-a77050d3126d.png._CB304373939__SR285,285_.png" densityAware="false" width="100%" />
+						<Image id="voucher4_img"  densityAware="false" width="100%" />
 					</l:HorizontalLayout>
 				</content>
 			</Panel>
 			<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
 				<headerToolbar>
 					<Toolbar height="3rem">
-						<Title text="Amazon"/>
+						<Title id="voucher5_title"/>
 					</Toolbar>
 				</headerToolbar>
 				<content>
 					<l:HorizontalLayout>
-						<Image src="https://images-na.ssl-images-amazon.com/images/G/01/aplusautomation/vendorimages/98363ce3-e0d8-4abb-b808-a77050d3126d.png._CB304373939__SR285,285_.png" densityAware="false" width="100%" />
+						<Image id="voucher5_img"  densityAware="false" width="100%" />
 					</l:HorizontalLayout>
 				</content>
 			</Panel>

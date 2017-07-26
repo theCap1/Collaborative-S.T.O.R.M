@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+        <Schema Namespace="Vouchers.Models"
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+            xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+            <EntityType Name="Voucher">
+                <Key>
+                    <PropertyRef Name="name" />
+                </Key>
+                <Property Name="voucher_code" Type="Edm.String" Nullable="false" />
+                <Property Name="name" Type="Edm.String" Nullable="false" />
+                <Property Name="dateAquired" Type="Edm.DateTime" Nullable="false" />
+                <Property Name="description" Type="Edm.String" Nullable="false" />
+                <Property Name="requiredPoints" Type="Edm.Int" Nullable="false" />
+            </EntityType>
+            <ComplexType Name="LocationDetail" />
+            <EntityContainer Name="Vouchers" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="VoucherSet" EntityType="Vouchers.Models.Voucher" />
+                <FunctionImport Name="FindVouchers" EntitySet="VoucherSet" ReturnType="Collection(Vouchers.Models.Voucher)" m:HttpMethod="GET" />
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

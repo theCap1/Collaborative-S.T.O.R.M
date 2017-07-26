@@ -1,0 +1,34 @@
+<mvc:View
+	controllerName="storm.controller.UserUI.Vouchers"
+	height="100%"
+	xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Page
+		showHeader="false" >
+		<content>
+			<List
+				id="list"
+				items="{/voucher}"
+				selectionChange="onSelectionChange"
+				includeItemInSelection="true" >
+				<items>
+					<StandardListItem
+						title="{description}"
+						description="{voucher_code}"
+						icon="data:image/bmp;base64, {img}"/>
+				</items>
+			</List>
+		</content>
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button id="edit" text="Edit" press="handleEditPress" />
+					<Button id="remove" text="Remove" type="Reject" visible="false" press="handleRemovePress" />
+					<Button id="done" text="Done" visible="false" press="handleDonePress" />
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>
