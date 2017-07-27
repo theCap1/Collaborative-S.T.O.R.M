@@ -37,7 +37,7 @@ sap.ui.define([
 		},
  
 		handleAccountPress : function () {
-			this._changeView("PersonalInfo"); 
+			this._changeView("DisplayPersonalInfo"); 
 		},
 		
 		_changeView: function (sViewName){

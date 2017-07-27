@@ -95,9 +95,9 @@
 						<f:FormElement label="Birthday">
 							<f:fields>
 								<DatePicker
-								id="DP2"
+								id="DatePicker"
 								value="{/user/0/birthday}" valueFormat="dd-MM-yyyy" displayFormat="long"
-								change="handleChange"
+								change="handleDateChange"
 								class="sapUiSmallMarginBottom"/>
 							</f:fields>
 						</f:FormElement>
@@ -105,7 +105,7 @@
 							<f:fields>
 								<MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" id="comboBreaker"
 									items="{/interest_category}">
-									<core:Item key="{name}" text="{name}" />
+									<core:Item key="{id}" text="{name}" />
 								</MultiComboBox>
 							</f:fields>
 						</f:FormElement>

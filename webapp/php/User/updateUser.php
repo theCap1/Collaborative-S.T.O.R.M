@@ -16,6 +16,10 @@
 		$tmp = "[]";
 	}
 	
+	if ($email = $oldemail){
+		$tmp = "[]";
+	}
+	
 	if ($tmp == "[]") {
 		$sql = "UPDATE `user` SET `firstname` = '$firstname', `lastname` = '$lastname', `email` = '$email', `internalCurrencyCount` = '$internalCurrencyCount', `password` = '$password', `gender` = '$gender', `birthday` = '$birthday', `address` = '$address' WHERE `user`.`email` = '$oldemail'";	
 		sql($sql);
