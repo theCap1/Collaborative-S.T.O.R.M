@@ -1,147 +1,116 @@
-<mvc:View controllerName="storm.controller.Registration" height="100%" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
-	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
-	<Page class="sapUiFioriObjectPage" showHeader="false">
-		<content>
-			<f:SimpleForm id="FieldGroupView" minWidth="1024" maxContainerCols="2" editable="true" layout="ResponsiveGridLayout"
-				title="New User - Registration" labelSpanL="4" labelSpanM="4" emptySpanL="0" emptySpanM="0" columnsL="2" columnsM="2"
-				validateFieldGroup="onValidateFieldGroup">
-				<f:content>
-					<!-- Billing Information -->
-					<core:Title text="Basic"/>
-					<Label text="Name" />
-					<Input fieldGroupIds="Billing Information" placeholder="Name.." value="{BillingName}" id="BillingName"/>
-					<Label text="Street/No."/>
-					<Input fieldGroupIds="Billing Information" placeholder="Street.." value="{BillingStreet}" id="BillingStreet"></Input>
-					<Input fieldGroupIds="Billing Information" placeholder="Number.." value="{BillingStreetNumber}" id="BillingStreetNumber">
-						<layoutData>
-							<l:GridData span="L3 M3 S4"/>
-						</layoutData>
-					</Input>
-					<Label text="ZIP Code/City"/>
-					<Input fieldGroupIds="Billing Information" placeholder="Zip.." value="{BillingZipCode}" id="BillingZipCode">
-						<layoutData>
-							<l:GridData span="L3 M3 S4"/>
-						</layoutData>
-					</Input>
-					<Input fieldGroupIds="Billing Information" placeholder="City.." value="{BillingCity}" id="BillingCity"/>
-					<Label text="Country"/>
-					<Select fieldGroupIds="Billing Information" width="100%" selectedKey="{BillingCountry}" id="BillingCountry">
-						<items>
-							<core:Item text="Germany" key="Germany"/>
-							<core:Item text="United States" key="United States"/>
-							<core:Item text="Great Britain" key="Great Britain"/>
-						</items>
-					</Select>
-					<Label text="Birthday"/>
-					<ComboBox fieldGroupIds="Birthday" placeholder="Month..." value="{BirthdaydMonth}" id="BirthdayMonth">
-						<items>
-							<core:Item text="01"/>
-							<core:Item text="02"/>
-							<core:Item text="03"/>
-							<core:Item text="04"/>
-							<core:Item text="05"/>
-							<core:Item text="06"/>
-							<core:Item text="06"/>
-							<core:Item text="07"/>
-							<core:Item text="08"/>
-							<core:Item text="09"/>
-							<core:Item text="10"/>
-							<core:Item text="11"/>
-							<core:Item text="12"/>
-						</items>
-					</ComboBox>
-					<ComboBox fieldGroupIds="Birthday" placeholder="Year..." value="{BirthdayYear}" id="BirthdayYear">
-						<items>
-							<core:Item text="1970"/>
-							<core:Item text="1971"/>
-							<core:Item text="1972"/>
-							<core:Item text="1973"/>
-							<core:Item text="1974"/>
-							<core:Item text="1975"/>
-							<core:Item text="1976"/>
-							<core:Item text="1977"/>
-							<core:Item text="1978"/>
-							<core:Item text="1979"/>
-							<core:Item text="1980"/>
-							<core:Item text="1981"/>
-							<core:Item text="1982"/>
-							<core:Item text="1983"/>
-							<core:Item text="1984"/>
-							<core:Item text="1985"/>
-							<core:Item text="1986"/>
-							<core:Item text="1987"/>
-							<core:Item text="1988"/>
-							<core:Item text="1989"/>
-							<core:Item text="1990"/>
-							<core:Item text="1991"/>
-							<core:Item text="1992"/>
-							<core:Item text="1993"/>
-							<core:Item text="1994"/>
-							<core:Item text="1995"/>
-							<core:Item text="1996"/>
-							<core:Item text="1997"/>
-							<core:Item text="1998"/>
-						</items>
-					</ComboBox>
-						<Label text="E-Mail"/>
-					<Input fieldGroupIds="Online" placeholder="Email.." value="{OnlineMail}" id="OnlineMail"/>
-					<Label text="Password"/>
-					<Input fieldGroupIds="Online" placeholder="Password.." value="{OnlinePassword}" id="Passwordr"/>
-					<Label text="Re-Type Password"/>
-					<Input fieldGroupIds="Online" placeholder="Re-Enter Password.." value="{OnlinePasswordVer}" id="PasswordVer"/>
-					<Label text="Gender"/>
+<mvc:View controllerName="storm.controller.Registrationpage.Registration" height="97%" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<Page class="sapUiFioriObjectPage" showHeader="false" height="90%" floatingFooter="true">
+		<VBox class="sapUiSmallMargin">
+			<f:Form id="FormChange"
+				editable="true">
+				<f:title>
+					<core:Title text="Your Data" />
+				</f:title>
+				<f:layout>
+					<f:ResponsiveGridLayout/>
+				</f:layout>
+				<f:formContainers>
+					<f:FormContainer title="Account">
+						<f:formElements>
+							<f:FormElement label="Mail Address">
+								<f:fields>
+									<Input placeholder="Enter Mail Address..." id="mailInput" type="Email"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="Password">
+								<f:fields>
+									<Input placeholder="Enter Password..." id="PasswordInput" type="Password"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="Repeat Password">
+								<f:fields>
+									<Input placeholder="Repeat Password..." id="repeatPasswordInput" type="Password"/>
+								</f:fields>
+							</f:FormElement>
+						</f:formElements>
+					</f:FormContainer>
 					
-					<core:Title text="Interests"/>
-							<Label text="Gender"/>
-					<Select fieldGroupIds="Gender" width="100%" selectedKey="{Gender}" id="Gender">
-						<items>
-							<core:Item text="Male" key="Male"/>
-							<core:Item text="Female" key="Female"/>
-						</items>
-					</Select>
-					<Label text="Interests"/>
-			<MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="500px"
-		items="{
-                    path: '/ProductCollection',
-                     sorter: { path: 'Name' }
-                }">
-		<core:Item key="{ProductId}" text="{Name}" />
-	</MultiComboBox>
-					<!--<VBox id="checkBoxContainer">-->
-						
-				<!--		<CheckBox text="[checkboxvar]" />
-						<CheckBox text="[checkboxvar]"/>
-						<CheckBox text="[checkboxvar]" />
-						<CheckBox text="[checkboxvar]"/>
-						<CheckBox text="[checkboxvar]"/>
-						<CheckBox text="[checkboxvar]"/>
-						<CheckBox text="[checkboxvar]" />-->
-					<!--</VBox>-->
+					<f:FormContainer title="Address">
+						<f:formElements>
+							<f:FormElement label="Street">
+								<f:fields>
+									<Input id="streetInput" placeholder="Enter Street..."/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="Number">
+								<f:fields>
+									<Input type="Number" id="numberInput" placeholder="Enter Number..."/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="ZIP Code">
+								<f:fields>
+									<Input type="Number" id="zipInput" placeholder="Enter ZIP Code..."/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="City">
+								<f:fields>
+									<Input id="cityInput" placeholder="Enter City..."/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="State">
+								<f:fields>
+									<Input id="stateInput" placeholder="Enter State..."/>
+								</f:fields>
+							</f:FormElement>
+						</f:formElements>
+					</f:FormContainer>
 					
-					<!-- Discount -->
-				
-				
-				
-					<!-- Online Info -->
-				</f:content>
-			</f:SimpleForm>
-			<MessageStrip id="BillingInformationMessage" visible="false" text="Default: Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-				showIcon="true" showCloseButton="true" close="onMsgStripClose"></MessageStrip>
-			<MessageStrip id="DiscountCodeMessage" visible="false" text="Default: Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-				showIcon="true" showCloseButton="true" close="onMsgStripClose"></MessageStrip>
-			<MessageStrip id="CreditCardMessage" visible="false" text="Default: Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-				showIcon="true" showCloseButton="true" close="onMsgStripClose"></MessageStrip>
-			<MessageStrip id="OnlineMessage" visible="false" text="Default: Lorem ipsum dolor sit amet, consectetur adipisicing elit." showIcon="true"
-				showCloseButton="true" close="onMsgStripClose"></MessageStrip>
-			<!-- Credit Card -->
-		</content>
+					<f:FormContainer title="Personal Information">
+						<f:formElements>
+							<f:FormElement label="Firstname">
+								<f:fields>
+									<Input id="firstNameInput" placeholder="Enter Firstname..."/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="Lastname">
+								<f:fields>
+									<Input id="lastNameInput" placeholder="Enter Lastname ..."/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="Gender">
+								<f:fields>
+									<RadioButtonGroup columns="3" width="100%" id="radioButtons">
+										<buttons>
+											<RadioButton id="Female" text="Female"/>
+											<RadioButton id="Male" text="Male"/>
+											<RadioButton id="Other" text="Other"/>
+										</buttons>
+									</RadioButtonGroup>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="Birthday">
+								<f:fields>
+									<DatePicker
+									id="datePicker" valueFormat="yyyy-MM-dd" displayFormat="long"
+									class="sapUiSmallMarginBottom"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="Interests">
+								<f:fields>
+									<MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" id="comboBreaker"
+										items="{/interest_category}">
+										<core:Item key="{id}" text="{name}" />
+									</MultiComboBox>
+								</f:fields>
+							</f:FormElement>
+						</f:formElements>
+					</f:FormContainer>
+				</f:formContainers>
+			</f:Form>
+		</VBox>
 		<footer>
-			<Toolbar>
-				<content>
-					<Button id="submit" text="Submit" press="onAccept" type="Accept" width="10%"/>
-					<Button id="cancel" text="Cancel" press="onCancel" type="Reject" width="10%"/>
-				</content>
-			</Toolbar>
+			<Bar>
+				<contentRight>
+					<Button id="submit" text="Submit" press="onSubmit" type="Emphasized" width="10%"/>
+					<Button id="cancel" text="Cancel" press="onCancel" type="Default" width="10%"/>
+				</contentRight>
+			</Bar>
 		</footer>
 	</Page>
 </mvc:View>

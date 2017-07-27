@@ -1,12 +1,11 @@
 <mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:tnt="sap.tnt" xmlns="sap.m"
 	controllerName="storm.controller.Homepage.Homepage">
-	
-	<App id="app">
+	<App id="appHome">
 		<pages>
 			<Page title="" showHeader="true">
 				<headerContent>
-					<Button text="User Login" icon="sap-icon://visits" press="handleCustomerPopoverPress"/>
-					<Button text="Customer Login" icon="sap-icon://manager" press="handleUserPopoverPress"/>
+					<Button text="User Login" icon="sap-icon://visits" press="handleUserPopoverPress"/>
+					<Button text="Customer Login" icon="sap-icon://manager" press="handleCustomerPopoverPress"/>
 				</headerContent>
 				<content>
 					<Carousel class="sapUiContentPadding" loop="true" height="40%" showPageIndicator="false">
@@ -26,10 +25,10 @@
 							<ObjectListItem title="About Us" number="" numberUnit="eur" intro="Find out more:" icon="sap-icon://laptop" id="__item37"/>
 							<ObjectListItem title="For Business" number="" numberUnit="eur" intro="Why choose us:" icon="sap-icon://projector" id="__item38"/>
 							<ObjectListItem title="For Users" number="" numberUnit="eur" intro="Why choose us:" icon="sap-icon://print" id="__item39"/>
-							<ObjectListItem title="Register" number="" numberUnit="eur" intro="Join Us:" icon="sap-icon://leads" id="__item40"/>
+							<ObjectListItem title="Register" type="Active" press="handleRegister" number="" numberUnit="eur" intro="Join Us:" icon="sap-icon://leads" id="__item40"/>
 						</sap.ui.layout:content>
 					</sap.ui.layout:Grid>
-					<Panel id="__panel0"> 
+					<Panel id="__panel0">
 						<Image width="1200px" height="275px" id="__image1" src="https://ocsddsmvc.files.wordpress.com/2017/07/storm-1.jpg?w=768"/>
 						<TextArea id="__area0"
 							value="The variety of our services gives us the edge over our competitors. Our excellent logistics service means that customers can minimise the pieces they need to have in stock which in turn means that resources are freed up and the risk of stocks becoming obsolescent is minimised. We make your operations more efficient with frequent deliveries, reduction of stock, less packaging and 95% reliability in our deliveries."
@@ -37,14 +36,10 @@
 						<Image width="1200px" height="275px" id="__image2" src="https://pbs.twimg.com/media/DAc5ffNXoAIOisH.jpg"/>
 						<content>
 							<TextArea id="__area1"
-							value="Nurturing relationships with your customers is a crucial part of growing a successful business. In this age of automation and innovation, caring for your customers has never been more important.
-
-At any moment, an unhappy customer can share their opinion with the masses through social media and the web and negatively affect your business. That’s why it’s even more important than ever to create an excellent experience for your customers to help develop your company’s relationship with them into love.
-
-Walt Disney said it best, “Do what you do so well that they will want to see it again and bring their friends.” Creating love between your company and your customers can help scale positive word of mouth that’s absolutely priceless."
-							editable="false" width="1200px" height="120px"/>
-								<Image width="1200px" height="275px" id="__image3" src="http://mcnairshirts.com/wp-content/uploads/2013/01/home-logos1.gif"/>
-						<!--	<List noDataText="Why Firms choose us" id="__list4">
+								value="Nurturing relationships with your customers is a crucial part of growing a successful business. In this age of automation and innovation, caring for your customers has never been more important. At any moment, an unhappy customer can share their opinion with the masses through social media and the web and negatively affect your business. That’s why it’s even more important than ever to create an excellent experience for your customers to help develop your company’s relationship with them into love. Walt Disney said it best, “Do what you do so well that they will want to see it again and bring their friends.” Creating love between your company and your customers can help scale positive word of mouth that’s absolutely priceless."
+								editable="false" width="1200px" height="120px"/>
+							<Image width="1200px" height="275px" id="__image3" src="http://mcnairshirts.com/wp-content/uploads/2013/01/home-logos1.gif"/>
+							<!--	<List noDataText="Why Firms choose us" id="__list4">
 								<items>
 									<FeedListItem icon="http://logok.org/wp-content/uploads/2014/05/Walmart-Logo-880x645.png" sender="Wallmart" text="" timestamp="Dec 02, 2012"
 										id="__item27"/>
@@ -56,10 +51,10 @@ Walt Disney said it best, “Do what you do so well that they will want to see i
 										timestamp="Dec 02, 2012" id="__item30"/></items>
 							</List>-->
 							<Toolbar>
-				<ToolbarSpacer/>
-					<Button text="Terms of Service" />
-				<Button text="S.T.O.R.M Advertising 2017" />
-			</Toolbar>
+								<ToolbarSpacer/>
+								<Button text="Terms of Service"/>
+								<Button text="S.T.O.R.M Advertising 2017"/>
+							</Toolbar>
 						</content>
 					</Panel>
 				</content>

@@ -20,22 +20,26 @@ sap.ui.define([
 					}
 				},
 				
-				rootView: "storm.view.UserUI.App",
+				rootView: "storm.view.Homepage.Homepage",
 					routing: {
 						config: {
 							targetsClass: "sap.m.routing.Targets",
 							viewPath: "storm.view",
-							controlId: "App",
+							controlId: "appHome",
 							controlAggregation: "pages",
 							viewType: "XML"
 						},
 						targets: {
-							login: {
+							home: {
 								viewName: "Homepage.Homepage",
 								viewLevel: 0
 							},
 							userUi: {
 								viewName: "UserUI.App",
+								viewLevel: 1
+							},
+							registration: {
+								viewName: "Registrationpage.Registration",
 								viewLevel: 1
 							}
 						}
@@ -45,7 +49,7 @@ sap.ui.define([
 				
 			init: function (){
 				UIComponent.prototype.init.apply(this, arguments);
-				this.getTargets().display("userUi");				
+				this.getTargets().display("home");				
 			}
 		});
 	});

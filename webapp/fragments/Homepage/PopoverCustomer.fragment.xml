@@ -16,10 +16,6 @@
 			<Toolbar>
 				<ToolbarSpacer/>
 				<Button
-					id="RegistrationC"
-					text="Register"
-					press="handleRegister" />
-				<Button
 					id="CustomerLogin"
 					text="Customer Login"
 					press="handleCustomerLoginPress" />
@@ -33,7 +29,7 @@
 				filterSuggests="false"
 				showSuggestion="false"
 				required="true"
-				placeholder="Enter username ..." />
+				placeholder="Enter Email ..." />
 				
 	<Label text="Password" labelFor="passwordInput"/>
 			<Input

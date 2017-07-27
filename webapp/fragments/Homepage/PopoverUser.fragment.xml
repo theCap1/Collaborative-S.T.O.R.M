@@ -31,7 +31,7 @@
 				type="Text"
 				filterSuggests="false"
 				required="true"
-				placeholder="Enter username ..." />
+				placeholder="Enter Email ..." />
 				
 	<Label text="Password" labelFor="passwordInput"/>
 			<Input
