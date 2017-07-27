@@ -16,10 +16,6 @@
 			<Toolbar>
 				<ToolbarSpacer/>
 				<Button
-					id="RegistrationC"
-					text="Register"
-					press="handleRegister" />
-				<Button
 					id="CustomerLogin"
 					text="Customer Login"
 					press="handleCustomerLoginPress" />
