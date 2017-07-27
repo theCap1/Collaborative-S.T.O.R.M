@@ -1,12 +1,12 @@
 <mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:tnt="sap.tnt" xmlns="sap.m"
 	controllerName="storm.controller.Homepage.Homepage">
 	
-	<App id="app">
+	<App id="appHome">
 		<pages>
 			<Page title="" showHeader="true">
 				<headerContent>
-					<Button text="User Login" icon="sap-icon://visits" press="handleCustomerPopoverPress"/>
-					<Button text="Customer Login" icon="sap-icon://manager" press="handleUserPopoverPress"/>
+					<Button text="User Login" icon="sap-icon://visits" press="handleUserPopoverPress"/>
+					<Button text="Customer Login" icon="sap-icon://manager" press="handleCustomerPopoverPress"/>
 				</headerContent>
 				<content>
 					<Carousel class="sapUiContentPadding" loop="true" height="40%" showPageIndicator="false">

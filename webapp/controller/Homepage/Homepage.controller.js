@@ -3,13 +3,23 @@ sap.ui.define([
 "sap/ui/core/mvc/Controller",
 'sap/m/Popover',
 'sap/m/Button',
+"sap/ui/model/json/JSONModel",
 'sap/m/MessageToast'
-], function(jQuery, Controller, Popover, Button, MessageToast) {
+], function(jQuery, Controller, Popover, Button, JSONModel, MessageToast) {
 "use strict";
 
 return Controller.extend("storm.controller.Homepage.Homepage", {
+	
 	onInit: function() {
-			
+		var data = {data:[
+
+             {email:""}
+
+            ]};
+
+		var oModel = new sap.ui.model.json.JSONModel();
+		oModel.setData(data);
+		sap.ui.getCore().setModel(oModel,"data");
 	},
 	
 	handleRegister: function(cEventCustomer) {
@@ -32,12 +42,12 @@ return Controller.extend("storm.controller.Homepage.Homepage", {
 	},
 
 	handleCustomerLoginPress: function(cEventCustomer) {
-		/*var sCustomerEmail = this._cPopover.getContent()[1]._lastValue;
+		var sCustomerEmail = this._cPopover.getContent()[1]._lastValue;
 		var sCustomerPassword = this._cPopover.getContent()[3]._lastValue;
-		var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+		var oOwnerComponent = this.getOwnerComponent();
 
 		$.ajax({
-			url: "php/getUserLogin.php",
+			url: "php/User/getUserLogin.php",
 			data: {
 				"email": sCustomerEmail,
 				"password": sCustomerPassword
@@ -45,8 +55,7 @@ return Controller.extend("storm.controller.Homepage.Homepage", {
 			type: "GET",
 			success: function(response) {
 				if (response == "success") {
-					oRouter.navTo("UserUI");
-					MessageToast.show("Successful Customer Login");
+					oOwnerComponent.getTargets().display("userUi");
 				} else {
 					MessageToast.show("Email or Password is incorrect");
 				}
@@ -56,8 +65,7 @@ return Controller.extend("storm.controller.Homepage.Homepage", {
 			}
 		});
 		this._cPopover.destroy();
-		this._cPopover = null;*/
-		this.getOwnerComponent().getTargets().display("userUi");
+		this._cPopover = null;
 	},
 	
 	PopoverClose: function() {
@@ -81,9 +89,10 @@ return Controller.extend("storm.controller.Homepage.Homepage", {
 	handleUserLoginPress: function(uEventUser) {
 		var sUserEmail = this._uPopover.getContent()[1]._lastValue;
 		var sUserPassword = this._uPopover.getContent()[3]._lastValue;
+		var oOwnerComponent = this.getOwnerComponent();
 
 		$.ajax({
-			url: "php/getUserLogin.php",
+			url: "php/User/getUserLogin.php",
 			data: {
 				"email": sUserEmail,
 				"password": sUserPassword
@@ -91,8 +100,12 @@ return Controller.extend("storm.controller.Homepage.Homepage", {
 			type: "GET",
 			success: function(response) {
 				if (response == "success") {
-					MessageToast.show("Successful User Login");
-					
+					if (sap.ui.getCore().getModel("data").getProperty("/data/0/email") === "") {
+						sap.ui.getCore().getModel("data").setProperty("/data/0/email", sUserEmail);
+					}else{
+						sap.ui.getCore().getModel("data").setProperty("/data/0/email", sUserEmail);
+					}
+					oOwnerComponent.getTargets().display("userUi");
 				} else {
 					MessageToast.show("Email or Password is incorrect");
 				}
@@ -103,7 +116,7 @@ return Controller.extend("storm.controller.Homepage.Homepage", {
 		});
 
 		this._uPopover.destroy();
-		this.uPopover = null;
+		this._uPopover = null;
 	}
 });
 

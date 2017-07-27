@@ -4,7 +4,8 @@
 	xmlns:core="sap.ui.core"
 	xmlns:l="sap.ui.layout"
 	xmlns="sap.m"
-	xmlns:xlink="http://www.w3.org/1999/xlink">
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	id="UserUIHomeView">
 	<l:Grid defaultSpan="L4 M6 S6" class="sapUiSmallMarginTop">
 		<l:content>
 			<Panel class="sapUiResponsiveMargin" width="auto" height="11rem" accessibleRole="Region" backgroundDesign="Solid">
@@ -58,15 +59,15 @@
 						<Link
 						text="How to collect Credits"
 						target="_blank"
-						href="http://www.sap.com"/>
+						href="http://www.google.de"/>
 						<Link
 						text="How to redeem Credits"
 						target="_blank"
-						href="http://www.sap.com"/>
+						href="http://www.google.de"/>
 						<Link
 						text="How to manage your Account"
 						target="_blank"
-						href="http://www.sap.com"/>
+						href="http://www.google.de"/>
 					</l:VerticalLayout>
 				</content>
 				<layoutData>

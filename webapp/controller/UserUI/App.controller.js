@@ -11,7 +11,8 @@ sap.ui.define([
 			afterRender: function() {
 			},
 			logout: function() {
-				this.getOwnerComponent().getTargets().display("login");
+				this.getOwnerComponent().getTargets().display("home");
+				location.reload();
 			}
 		});
 	});

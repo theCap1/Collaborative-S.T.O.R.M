@@ -102,6 +102,42 @@
 					</l:HorizontalLayout>
 				</content>
 			</Panel>
+			<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+				<headerToolbar>
+					<Toolbar height="3rem">
+						<Title id="voucher6_title"/>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<l:HorizontalLayout>
+						<Image id="voucher6_img"  densityAware="false" width="100%" />
+					</l:HorizontalLayout>
+				</content>
+			</Panel>
+			<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+				<headerToolbar>
+					<Toolbar height="3rem">
+						<Title id="voucher7_title"/>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<l:HorizontalLayout>
+						<Image id="voucher7_img"  densityAware="false" width="100%" />
+					</l:HorizontalLayout>
+				</content>
+			</Panel>
+			<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+				<headerToolbar>
+					<Toolbar height="3rem">
+						<Title id="voucher8_title"/>
+					</Toolbar>
+				</headerToolbar>
+				<content>
+					<l:HorizontalLayout>
+						<Image id="voucher8_img"  densityAware="false" width="100%" />
+					</l:HorizontalLayout>
+				</content>
+			</Panel>
 		</l:content>
 	</l:Grid>
 </mvc:View>
