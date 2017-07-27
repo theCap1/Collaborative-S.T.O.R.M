@@ -25,7 +25,7 @@
 							<ObjectListItem title="About Us" number="" numberUnit="eur" intro="Find out more:" icon="sap-icon://laptop" id="__item37"/>
 							<ObjectListItem title="For Business" number="" numberUnit="eur" intro="Why choose us:" icon="sap-icon://projector" id="__item38"/>
 							<ObjectListItem title="For Users" number="" numberUnit="eur" intro="Why choose us:" icon="sap-icon://print" id="__item39"/>
-							<ObjectListItem title="Register" press="handleRegister" number="" numberUnit="eur" intro="Join Us:" icon="sap-icon://leads" id="__item40"/>
+							<ObjectListItem title="Register" type="Active" press="handleRegister" number="" numberUnit="eur" intro="Join Us:" icon="sap-icon://leads" id="__item40"/>
 						</sap.ui.layout:content>
 					</sap.ui.layout:Grid>
 					<Panel id="__panel0">

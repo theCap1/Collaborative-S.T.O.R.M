@@ -27,7 +27,7 @@ sap.ui.define([
 		},
 
 		handleRegister: function(cEventCustomer) {
-			this.getTargets().display("registration");
+			this.getOwnerComponent().getTargets().display("registration");
 		},
 
 		handleCustomerPopoverPress: function(cEventCustomer) {

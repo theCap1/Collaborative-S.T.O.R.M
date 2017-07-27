@@ -1,13 +1,13 @@
 <?php
 	include_once '../db.php';
 
-	$email = $_POST['email'];
-	$firstname = $_POST['firstname'];
-	$lastname = $_POST['lastname'];
-	$password = $_POST['password'];
-	$gender = $_POST['gender'];
-	$birthday = $_POST['birthday'];
-	$address = $_POST['address'];
+	$email = $_GET['email'];
+	$firstname = $_GET['firstname'];
+	$lastname = $_GET['lastname'];
+	$password = $_GET['password'];
+	$gender = $_GET['gender'];
+	$birthday = $_GET['birthday'];
+	$address = $_GET['address'];
 	
 	$tmp = json_encode(sql("SELECT * FROM `user` WHERE email = '$email'"));
 	

@@ -29,7 +29,7 @@
 				filterSuggests="false"
 				showSuggestion="false"
 				required="true"
-				placeholder="Enter username ..." />
+				placeholder="Enter Email ..." />
 				
 	<Label text="Password" labelFor="passwordInput"/>
 			<Input
