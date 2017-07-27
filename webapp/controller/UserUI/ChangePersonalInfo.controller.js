@@ -30,7 +30,7 @@ sap.ui.define([
 				type:"GET",
 				context: this,
 				data: {
-					email: "bla@bla.de"
+					email: sap.ui.getCore().getModel("data").getProperty("/data/0/email")
 				},
 				success: function handleSuccess(response){
 					var oModel = new JSONModel();
@@ -166,6 +166,7 @@ sap.ui.define([
 													MessageToast.show("Ups, something went wrong with the transmission of your interests. Please contact the support. :(");
 												}
 											});
+											sap.ui.getCore().getModel("data").setProperty("/data/0/email",sNewEmail);
 										}else{
 											MessageToast.show("Sorry, but this mail address is already taken.");
 										}
