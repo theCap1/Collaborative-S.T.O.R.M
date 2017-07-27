@@ -2,7 +2,7 @@ sap.ui.define(['sap/m/MessageToast', 'sap/ui/core/mvc/Controller', 'sap/ui/model
 	function(MessageToast, Controller, JSONModel, jQuery, jQuerySapScript) {
 		"use strict";
 
-		return Controller.extend("storm.controller.registration", {
+		return Controller.extend("storm.controller.Registrationpage.Registration", {
 
 
 			onInit: function(oEvent) {
