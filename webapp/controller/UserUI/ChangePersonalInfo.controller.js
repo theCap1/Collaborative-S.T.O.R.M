@@ -34,6 +34,7 @@ sap.ui.define([
 				},
 				success: function handleSuccess(response){
 					var oModel = new JSONModel();
+    				oModel.setDefaultBindingMode(sap.ui.model.BindingMode.OneWay);
 					oModel.setJSON(response);
 					this.getView().setModel(oModel);
 					
@@ -94,7 +95,8 @@ sap.ui.define([
 			var sPassword = this.getView().byId("currentPasswordInput").getValue();
 			var iAccountBalance = this.getView().getModel().getProperty("/user/0/internalCurrencyCount");
 			var sGender = this.getView().byId("radioButtons").getSelectedButton().getText();
-			var dBirthday = this.getView().byId("datePicker").getValue().format('yyyy-mm-dd');
+			
+			var dBirthday = this.getView().byId("datePicker").getValue();
 			
 			var sStreet = this.getView().byId("streetInput").getValue();
 			var sNumber = this.getView().byId("numberInput").getValue();
@@ -120,60 +122,68 @@ sap.ui.define([
 			}
 			
 			if(sNewPassword === sRepeatNewPassword){
-				$.ajax({
-					url:"php/User/getUserLogin.php",
-					data: {
-						email: sOldEmail,
-						password: sPassword
-					},
-					type:"GET",
-					context: this,
-					success: function handleSuccess(response){
-						if (response === "success") {
-							$.ajax({
-								url:"php/User/updateUser.php",
-								data: {
-									oldemail: sOldEmail,
-									email: sNewEmail,
-									firstname: sFirstName,
-									lastname: sLastName,
-									password: sNewPassword,
-									internalCurrencyCount: iAccountBalance,
-									gender: sGender,
-									birthday: dBirthday,
-									address: sAddress
-								},
-								type:"GET",
-								context: this,
-								success: function handleSuccess2(){
-									$.ajax({
-										url:"php/User/setInterestsUser.php",
-										data: {
-											email: sNewEmail,
-											interests: aInterests
-										},
-										type:"GET",
-										context: this,
-										success: function handleSuccess3(){
-											MessageToast.show("Your data was successfully updated!");
-										},
-										error:function handleError(){
-											MessageToast.show("Ups, something went wrong with the transmission of your interests. Please contact the support. :(");
+				if(sNewEmail !== "" && sFirstName !== "" && sLastName !== "" && dBirthday !== "" && sStreet !== "" && sNumber !== "" && sZIP !== "" && sCity !== "" && sState !== ""){
+					$.ajax({
+						url:"php/User/getUserLogin.php",
+						data: {
+							email: sOldEmail,
+							password: sPassword
+						},
+						type:"GET",
+						context: this,
+						success: function handleSuccess(response){
+							if (response === "success") {
+								$.ajax({
+									url:"php/User/updateUser.php",
+									data: {
+										oldemail: sOldEmail,
+										email: sNewEmail,
+										firstname: sFirstName,
+										lastname: sLastName,
+										password: sNewPassword,
+										internalCurrencyCount: iAccountBalance,
+										gender: sGender,
+										birthday: dBirthday,
+										address: sAddress
+									},
+									type:"GET",
+									context: this,
+									success: function handleSuccess2(response2){
+										if(response2==="success"){
+											$.ajax({
+												url:"php/User/setInterestsUser.php",
+												data: {
+													email: sNewEmail,
+													interests: aInterests
+												},
+												type:"GET",
+												context: this,
+												success: function handleSuccess3(){
+													MessageToast.show("Your data was successfully updated!");
+													this._changeView("DisplayPersonalInfo");
+												},
+												error:function handleError(){
+													MessageToast.show("Ups, something went wrong with the transmission of your interests. Please contact the support. :(");
+												}
+											});
+										}else{
+											MessageToast.show("Sorry, but this mail address is already taken.");
 										}
-									});
-								},
-								error:function handleError(){
-									MessageToast.show("Ups, something went wrong with the transmission of your data. Please contact the support. :(");
-								}
-							});
-							this._changeView("DisplayPersonalInfo");
-						}else{
-							MessageToast.show("Please enter your password to save or press 'Cancel'");
+									},
+									error:function handleError(){
+										MessageToast.show("Ups, something went wrong with the transmission of your data. Please contact the support. :(");
+									}
+								});
+							}else{
+								MessageToast.show("Please enter your password to save or press 'Cancel'");
+							}
+						},
+						error:function handleError(){
 						}
-					},
-					error:function handleError(){
-					}
-				});
+					});
+				}else{
+				MessageToast.show("Please fill out all the mandatory fields.");
+				}
 			}else{
 				MessageToast.show("The new password and the repeatition of it do not not match!");
 			}

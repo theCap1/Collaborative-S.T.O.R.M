@@ -101,8 +101,7 @@
 								<f:fields>
 									<DatePicker
 									id="datePicker"
-									value="{/user/0/birthday}" valueFormat="dd-MM-yyyy" displayFormat="long"
-									change="handleDateChange"
+									value="{/user/0/birthday}" valueFormat="yyyy-MM-dd" displayFormat="long"
 									class="sapUiSmallMarginBottom"/>
 								</f:fields>
 							</f:FormElement>
