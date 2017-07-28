@@ -14,7 +14,7 @@ sap.ui.define([
 					type:"GET",
 					context: this,
 					data: {
-						email: "bla@bla.de"
+						email: sap.ui.getCore().getModel("data").getProperty("/data/0/email")
 					},
 					success: function handleSuccess(response){
 						var oModel = new JSONModel();

@@ -38,7 +38,7 @@
 				</headerToolbar>
 				<content>
 					<l:HorizontalLayout>
-						<Image id="voucher0_img"  densityAware="false" width="100%" />
+						<Image id="voucher0_img" press="voucherPress"  densityAware="false" width="100%" />
 					</l:HorizontalLayout>
 				</content>
 			</Panel>
@@ -50,7 +50,7 @@
 				</headerToolbar>
 				<content>
 					<l:HorizontalLayout>
-						<Image id="voucher1_img"  densityAware="false" width="100%" />
+						<Image id="voucher1_img" press="voucherPress"  densityAware="false" width="100%" />
 					</l:HorizontalLayout>
 				</content>
 			</Panel>
@@ -62,7 +62,7 @@
 				</headerToolbar>
 				<content>
 					<l:HorizontalLayout>
-						<Image id="voucher2_img"  densityAware="false" width="100%" />
+						<Image id="voucher2_img" press="voucherPress" densityAware="false" width="100%" />
 					</l:HorizontalLayout>
 				</content>
 			</Panel>
@@ -74,7 +74,7 @@
 				</headerToolbar>
 				<content>
 					<l:HorizontalLayout>
-						<Image id="voucher3_img"  densityAware="false" width="100%" />
+						<Image id="voucher3_img" press="voucherPress" densityAware="false" width="100%" />
 					</l:HorizontalLayout>
 				</content>
 			</Panel>
@@ -86,7 +86,7 @@
 				</headerToolbar>
 				<content>
 					<l:HorizontalLayout>
-						<Image id="voucher4_img"  densityAware="false" width="100%" />
+						<Image id="voucher4_img" press="voucherPress" densityAware="false" width="100%" />
 					</l:HorizontalLayout>
 				</content>
 			</Panel>
@@ -98,7 +98,7 @@
 				</headerToolbar>
 				<content>
 					<l:HorizontalLayout>
-						<Image id="voucher5_img"  densityAware="false" width="100%" />
+						<Image id="voucher5_img" press="voucherPress" densityAware="false" width="100%" />
 					</l:HorizontalLayout>
 				</content>
 			</Panel>
@@ -110,7 +110,7 @@
 				</headerToolbar>
 				<content>
 					<l:HorizontalLayout>
-						<Image id="voucher6_img"  densityAware="false" width="100%" />
+						<Image id="voucher6_img" press="voucherPress" densityAware="false" width="100%" />
 					</l:HorizontalLayout>
 				</content>
 			</Panel>
@@ -122,7 +122,7 @@
 				</headerToolbar>
 				<content>
 					<l:HorizontalLayout>
-						<Image id="voucher7_img"  densityAware="false" width="100%" />
+						<Image id="voucher7_img" press="voucherPress" densityAware="false" width="100%" />
 					</l:HorizontalLayout>
 				</content>
 			</Panel>
@@ -134,7 +134,7 @@
 				</headerToolbar>
 				<content>
 					<l:HorizontalLayout>
-						<Image id="voucher8_img"  densityAware="false" width="100%" />
+						<Image id="voucher8_img" press="voucherPress" densityAware="false" width="100%" />
 					</l:HorizontalLayout>
 				</content>
 			</Panel>

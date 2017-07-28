@@ -26,7 +26,6 @@ sap.ui.define([
 				});
 			},
 			rfidPress : function () {
-				// show a native JavaScript alert
 				window.open('https://de.wikipedia.org/wiki/RFID','_blank');
 			}
 		});
