@@ -1,9 +1,13 @@
 sap.ui.define([
+	'sap/m/Button',
 	"sap/ui/core/mvc/Controller",
-	"sap/ui/model/json/JSONModel"
+	"sap/ui/model/json/JSONModel",
+	'sap/m/Dialog',
+	'sap/m/Text',
+	'sap/m/MessageToast'
 	],
 
-	function(Controller, JSONModel, Toast) {
+	function(Button, Controller, JSONModel, Dialog, Text, MessageToast) {
 		"use strict";
 
 		return Controller.extend("storm.controller.UserUI.RedeemCurrency", {
@@ -48,9 +52,63 @@ sap.ui.define([
 				});
 			},
 			
-			voucherPress : function () {
-				// show a native JavaScript alert
-				window.open('https://de.wikipedia.org/wiki/RFID','_blank');
+			voucherPress : function (oEvent) {
+				var oView = this.getView();
+				var oModel = oView.getModel();
+				
+				var sVoucherTitle = oEvent.getSource().getParent().getParent().mAggregations.headerToolbar.mAggregations.content[0].mProperties.text;
+				var sVoucherDescription = sVoucherTitle.split(" | ")[0];
+				var sVoucherPrice = sVoucherTitle.split(" | ")[1];
+				var sVoucherName;
+				var vouchersCount = oModel.getProperty("/voucher").length;
+				for (var i = 0; i < vouchersCount; i++) { 
+					var sDescriptionText=oModel.getProperty("/voucher/" + i + "/description");
+					if(sDescriptionText === sVoucherDescription){
+						sVoucherName = oModel.getProperty("/voucher/" + i + "/name");
+					}
+				}
+						
+				var oDialog = new Dialog({
+				title: "Confirm",
+				type: "Message",
+				content: new Text({ text: "Are you sure you want to pay " + sVoucherPrice + " Credits for this " + sVoucherDescription + "?" }),
+				beginButton: new Button({
+					text: "Confirm",
+					press: function () {
+						$.ajax({
+							url:"php/User/setVoucherUserConnection.php",
+							type:"POST",
+							data: {
+								voucher_name: sVoucherName,
+								user_email: sap.ui.getCore().getModel("data").getProperty("/data/0/email")
+							},
+							context: this,
+							success: function handleSuccess(response){
+								if (response === "success"){
+									MessageToast.show("Congratulations! The voucher was added to your voucher list. :)");
+									oView.byId("accBalance").setText(oView.byId("accBalance").getText()-sVoucherPrice);
+								}else{
+									MessageToast.show("Ups, it seems like you don't have enough credits for this voucher. :(");
+								}
+							},
+							error:function handleError(){
+							}
+						});
+						oDialog.close();
+					}
+				}),
+				endButton: new Button({
+					text: "Cancel",
+					press: function () {
+						oDialog.close();
+					}
+				}),
+				afterClose: function() {
+					oDialog.destroy();
+				}
+			});
+ 
+			oDialog.open();
 			}
 		});
 	});

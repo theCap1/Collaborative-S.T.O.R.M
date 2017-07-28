@@ -26,8 +26,16 @@ sap.ui.define([
 				});
 			},
 			rfidPress : function () {
-				// show a native JavaScript alert
 				window.open('https://de.wikipedia.org/wiki/RFID','_blank');
+			},
+			tilePress:function(){
+				var oDetailPage = this.getView().getParent().getParent().getParent().getCurrentDetailPage();
+			
+			oDetailPage.removeAllContent();
+			
+			var oView = sap.ui.view({viewName:"storm.view.UserUI.RedeemCurrency", type:sap.ui.core.mvc.ViewType.XML});
+			
+			oDetailPage.insertContent(oView);
 			}
 		});
 	});
