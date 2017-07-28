@@ -22,7 +22,7 @@
 			</Toolbar>
 
 		</footer>
-	<Label text="Username" labelFor="usernameInput"/>
+	<Label text="Email" labelFor="usernameInput"/>
 			<Input
 				id="CustomerUsernameInput"
 				type="Text"

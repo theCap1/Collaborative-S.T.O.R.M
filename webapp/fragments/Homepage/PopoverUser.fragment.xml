@@ -25,7 +25,7 @@
 					press="handleUserLoginPress" />
 			</Toolbar>
 		</footer>
-	<Label text="Username" labelFor="usernameInput"/>
+	<Label text="Email" labelFor="usernameInput"/>
 			<Input
 				id="UserusernameInput"
 				type="Text"
