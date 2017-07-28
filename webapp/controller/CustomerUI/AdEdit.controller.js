@@ -4,8 +4,9 @@ sap.ui.define([
 	'sap/m/Popover',
 	'sap/m/Button',
 	'sap/ui/model/json/JSONModel',
-	'sap/m/Dialog'
-], function(jQuery, Controller, Popover, Button, JSONModel, Dialog) {
+	'sap/m/Dialog',
+	'sap/m/MessageToast'
+], function(jQuery, Controller, Popover, Button, JSONModel, Dialog, MessageToast) {
 	"use strict";
 
 	return Controller.extend("storm.controller.CustomerUI.AdEdit", {
@@ -74,37 +75,34 @@ sap.ui.define([
 			oDetailPage.insertContent(oView);
 		},
 		
-		handleSavePress:function(){
-			var list = this.getView().byId("list");
-			var aToBeDeleted = list.getSelectedItems();
-			var sVoucherCode;
+		handleDeletePress: function(){
+			var oDetailPage = this.getView().getParent().getParent().getParent().getCurrentDetailPage();
+			var oView = sap.ui.view({viewName:"storm.view.CustomerUI.Manage", type:sap.ui.core.mvc.ViewType.XML});
 			
-			if(aToBeDeleted.length !== 0){
 				var oDialog = new Dialog({
 					title: "Warning",
 					type: "Message",
 					state: "Warning",
-					content: new Text({ text: "Are you sure you want to remove these vouchers from your list? You will not be able to access them afterwards." }),
+					content: new Text({ text: "Are you sure you want to remove this ad from the database? You won't be able to access it anymore." }),
 					beginButton: new Button({
 						text: "Remove",
 						press: function () {
-							for (var i = 0; i < aToBeDeleted.length; i++) { 
-								sVoucherCode = aToBeDeleted[i].getProperty("description");
 								$.ajax({
-									url:"php/User/deleteUserVoucher.php",
+									url:"php/Customer/deleteAd.php",
 									type:"GET",
 									context: this,
 									data: {
-										voucher_code: sVoucherCode
+										name: sap.ui.getCore().getModel("data").getProperty("/data/0/ad")
 									},
 									success: function handleSuccess(){
 									},
 									error:function handleError(){
 									}
 								});
-								list.removeItem(aToBeDeleted[i]);
-							}
+								//list.removeItem(aToBeDeleted[i]);
 							oDialog.close();
+							oDetailPage.removeAllContent();
+							oDetailPage.insertContent(oView);
 						}
 					}),
 					endButton: new Button({
@@ -118,8 +116,45 @@ sap.ui.define([
 					}
 				});
 			oDialog.open();
+		},
+		
+		handleSavePress:function(){
+			var sName = this.getView().byId("adNameInput").getValue();
+			var aInterests = this.getView().byId("comboBreaker").getEnabledItems();
+			var aUserInterests = this.getView().byId("comboBreaker").getSelectedKeys();
+			for(var i = 0; i < aInterests.length; i++){
+				aInterests[i] = "0";
 			}
-			this.handleDonePress();
+			for(i = 0; i < aUserInterests.length; i++){
+				aInterests[aUserInterests[(i)]-1]="1";
+			}
+				$.ajax({
+					url:"php/Customer/updateAd.php",
+					type:"GET",
+					context: this,
+					data: {
+						name: sName,
+						oldname: sap.ui.getCore().getModel("data").getProperty("/data/0/ad")
+					},
+					success: function handleSuccess(){
+						$.ajax({
+							url:"php/Customer/setInterestsAd.php",
+							type:"GET",
+							context: this,
+							data: {
+								interests: aInterests,
+								ad_name: sName
+							},
+							success: function handleSuccess(){
+								MessageToast.show("Ad updated successfully!");
+							},
+							error:function handleError(){
+							}
+						});
+					},
+					error:function handleError(){
+					}
+				});
 		}
 
 	});

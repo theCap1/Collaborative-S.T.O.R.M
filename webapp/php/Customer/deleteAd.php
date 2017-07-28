@@ -3,7 +3,7 @@
 
 
 
-	$name = $_POST['name'];
+	$name = $_GET['name'];
 
 	$sql = "DELETE FROM `ad` WHERE `ad`.`name` = '$name'";	
 	

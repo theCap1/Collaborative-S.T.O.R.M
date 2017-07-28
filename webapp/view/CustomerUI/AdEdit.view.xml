@@ -1,5 +1,5 @@
 <mvc:View
-	height="100%"
+	height="97%"
 	controllerName="storm.controller.CustomerUI.AdEdit"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
@@ -42,7 +42,7 @@
 		<footer>
 			<Bar>
 				<contentRight>
-					<Button id="delete" text="Delete" press="handleDeletePress"/>
+					<Button id="delete" text="Delete" type = "Reject" press="handleDeletePress"/>
 					<Button id="cancel" text="Cancel" press="handleCancelPress" />
 					<Button id="save" text="Save" type="Accept" press="handleSavePress" />
 				</contentRight>
