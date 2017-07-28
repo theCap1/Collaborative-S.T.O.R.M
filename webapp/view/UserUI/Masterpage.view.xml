@@ -33,7 +33,8 @@
 	                select="handleAccountPress"/>
 	        <NavigationListItem
 	                text="Contact us"
-	                icon="sap-icon://letter"/>
+	                icon="sap-icon://letter"
+	                select="handleContactUs"/>
 	    </NavigationList>
     </m:Page>
 </mvc:View>

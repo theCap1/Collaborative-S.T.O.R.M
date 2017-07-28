@@ -32,6 +32,10 @@ sap.ui.define([
 			this._changeView("RedeemCurrency"); 
 		},
 		
+		handleContactUs : function () {
+			this._changeView("ContactUs");
+		},
+		
 		handleVouchersPress : function () {
 			this._changeView("Vouchers");	
 		},

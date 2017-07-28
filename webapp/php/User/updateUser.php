@@ -16,7 +16,7 @@
 		$tmp = "[]";
 	}
 	
-	if ($email = $oldemail){
+	if ($email == $oldemail){
 		$tmp = "[]";
 	}
 	

@@ -1,0 +1,25 @@
+<mvc:View 
+	id="App3" 
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:layout="sap.ui.layout" 
+	xmlns="sap.m"
+	controllerName="storm.controller.CustomerUI.App"
+	displayBlock="true" 
+	height="101%">
+      
+ 
+	<SplitContainer id="splitContainer">
+		<detailPages>
+			<Page responsive="true" id="detail" class="sapUiResponsiveContentPadding" enableScrolling="true" floatingFooter="true" showHeader="false">
+				<content>
+					<mvc:XMLView viewName="storm.view.CustomerUI.Manage"/>
+				</content>
+			</Page>
+		</detailPages>
+		<masterPages>
+			<Page id="master" icon="sap-icon://action" class="sapUiResponsiveMargin" showHeader="false" floatingFooter="true">
+				<mvc:XMLView viewName="storm.view.CustomerUI.Masterpage"/>
+			</Page>
+		</masterPages>
+	</SplitContainer>
+</mvc:View>

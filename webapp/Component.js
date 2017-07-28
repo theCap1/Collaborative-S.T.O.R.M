@@ -41,6 +41,10 @@ sap.ui.define([
 							registration: {
 								viewName: "Registrationpage.Registration",
 								viewLevel: 1
+							},
+							customerUi: {
+								viewName: "CustomerUI.App",
+								viewLevel: 1
 							}
 						}
 					}
