@@ -84,17 +84,20 @@
 					<GenericTile
 						backgroundImage="https://cdn.fashiola.com.br/I4641/360x180/nike_1.jpg"
 						frameType="TwoByOne"
-						header="New Vouchers">
+						header="New Vouchers"
+						press="tilePress">
 					</GenericTile>
 					<GenericTile
 						backgroundImage="http://i1.wp.com/tricksandguides.com/wp-content/uploads/2016/11/amazon-voucher.jpg?resize=360%2C180"
 						frameType="TwoByOne"
-						header="New Vouchers">
+						header="New Vouchers"
+						press="tilePress">
 					</GenericTile>
 					<GenericTile
 						backgroundImage="//insideflyer.co.uk/wp-content/uploads/2016/12/iTunes-logo-1-360x180.jpg"
 						frameType="TwoByOne"
-						header="New Vouchers">
+						header="New Vouchers"
+						press="tilePress">
 					</GenericTile>
 				</tiles>
 			</SlideTile>
