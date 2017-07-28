@@ -51,7 +51,7 @@ sap.ui.define([
 			var oOwnerComponent = this.getOwnerComponent();
 
 			$.ajax({
-				url: "php/User/getUserLogin.php",
+				url: "php/Customer/getCustomerLogin.php",
 				data: {
 					"email": sCustomerEmail,
 					"password": sCustomerPassword
@@ -59,7 +59,8 @@ sap.ui.define([
 				type: "GET",
 				success: function(response) {
 					if (response == "success") {
-						oOwnerComponent.getTargets().display("userUi");
+						sap.ui.getCore().getModel("data").setProperty("/data/0/email", sCustomerEmail);
+						oOwnerComponent.getTargets().display("customerUi");
 					} else {
 						MessageToast.show("Email or Password is incorrect");
 					}
@@ -68,6 +69,7 @@ sap.ui.define([
 
 				}
 			});
+			oOwnerComponent.getTargets().display("customerUi");
 			this._cPopover.destroy();
 			this._cPopover = null;
 		},

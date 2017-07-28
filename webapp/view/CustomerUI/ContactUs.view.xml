@@ -1,0 +1,12 @@
+<core:View height="100%"
+		   xmlns:core="sap.ui.core"
+		   xmlns="sap.m"
+		   xmlns:html="http://www.w3.org/1999/xhtml"
+		   controllerName="storm.controller.CustomerUI.ContactUs">
+	
+	<Page showHeader="false" class="sapUiContentPadding" showNavButton="false">
+		<content>
+			<core:Fragment fragmentName="storm.fragments.CustomerUI.ContactUs" type="XML" />
+		</content>
+	</Page>
+</core:View>

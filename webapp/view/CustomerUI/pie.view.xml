@@ -1,0 +1,28 @@
+<mvc:View controllerName="storm.controller.CustomerUI.pie" xmlns="sap.m" xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data" height="100%">
+	<layout:FixFlex id='chartFixFlex' minFlexSize="250" fixContentSize="4rem">
+		<!--Below is the setting panel -->
+		<layout:fixContent>
+			<Text text="This pie chart displays the different ads that belong to your shops and how often they were shown."></Text>
+		</layout:fixContent>
+		<layout:flexContent>
+			<viz:Popover id="idPopOver"></viz:Popover>
+			<viz:VizFrame id="idVizFrame" height='100%' width="100%" vizType='pie'>
+				<viz:dataset>
+					<viz.data:FlattenedDataset data="{/Ads}">
+						<viz.data:dimensions>
+							<viz.data:DimensionDefinition name="name" value="{name}"/>
+						</viz.data:dimensions>
+						<viz.data:measures>
+							<viz.data:MeasureDefinition name="Total Hits" value="{counter}"/>
+						</viz.data:measures>
+					</viz.data:FlattenedDataset>
+				</viz:dataset>
+				<viz:feeds>
+					<viz.feeds:FeedItem uid="size" type="Measure" values="Total Hits"/>
+					<viz.feeds:FeedItem uid="color" type="Dimension" values="name"/>
+				</viz:feeds>
+			</viz:VizFrame>
+		</layout:flexContent>
+	</layout:FixFlex>
+</mvc:View>

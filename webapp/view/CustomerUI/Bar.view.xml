@@ -1,0 +1,28 @@
+<mvc:View controllerName="storm.controller.CustomerUI.Bar" xmlns="sap.m" xmlns:viz="sap.viz.ui5.controls" xmlns:layout="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data" height="100%">
+	<layout:FixFlex id='chartFixFlex' minFlexSize="250" fixContentSize="4rem">
+		<!--Below is the setting panel -->
+		<layout:fixContent>
+			<Text text="This chart actually displays the hitrates of all ads combined in the specified month."></Text>
+		</layout:fixContent>
+		<layout:flexContent>
+			<viz:Popover id="idPopOver"></viz:Popover>
+			<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='bar'>
+				<viz:dataset>
+					<viz.data:FlattenedDataset data="{/Hitrates}">
+						<viz.data:dimensions>
+							<viz.data:DimensionDefinition name="month" value="{month}"/>
+						</viz.data:dimensions>
+						<viz.data:measures>
+							<viz.data:MeasureDefinition name="Hitrate" value="{Hitrate}"/>
+						</viz.data:measures>
+					</viz.data:FlattenedDataset>
+				</viz:dataset>
+				<viz:feeds>
+					<viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure" values="Hitrate"/>
+					<viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="month"/>
+				</viz:feeds>
+			</viz:VizFrame>
+		</layout:flexContent>
+	</layout:FixFlex>
+</mvc:View>
