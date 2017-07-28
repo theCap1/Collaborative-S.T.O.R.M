@@ -1,0 +1,52 @@
+<mvc:View
+	height="100%"
+	controllerName="storm.controller.CustomerUI.AdEdit"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+	<Page
+		id="page"
+		showHeader="false" >
+		<VBox class="sapUiSmallMargin">
+			<f:Form id="FormChange"
+				editable="true">
+				<f:title>
+					<core:Title text="Ad Data" />
+				</f:title>
+				<f:layout>
+					<f:GridLayout/>
+				</f:layout>
+				<f:formContainers>
+					<f:FormContainer title="Personal Information">
+						<f:formElements>
+							<f:FormElement label="Ad Name">
+								<f:fields>
+									<Input id="adNameInput"/>
+								</f:fields>
+							</f:FormElement>
+							<f:FormElement label="Interests">
+								<f:fields>
+									<MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" id="comboBreaker"
+										items="{/interest_category}">
+										<core:Item key="{id}" text="{name}" />
+									</MultiComboBox>
+								</f:fields>
+							</f:FormElement>
+						</f:formElements>
+					</f:FormContainer>
+				</f:formContainers>
+			</f:Form>
+		</VBox>
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button id="delete" text="Delete" press="handleDeletePress"/>
+					<Button id="cancel" text="Cancel" press="handleCancelPress" />
+					<Button id="save" text="Save" type="Accept" press="handleSavePress" />
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</mvc:View>

@@ -40,16 +40,17 @@ sap.ui.define([
 			doneButton.setVisible(true);
 		},
 		
-		handleDonePress:function(){
-			var list = this.getView().byId("list");
-			list.setMode("None");
+		handleAddPress:function(oSource){
+			var sAddName = oSource.oSource.getSelectedItem().getProperty("title");
+			sap.ui.getCore().getModel("data").setProperty("/data/0/ad", sAddName);
 			
-			var remButton = this.getView().byId("remove");
-			remButton.setVisible(false);
-			var editButton = this.getView().byId("edit");
-			editButton.setVisible(true);
-			var doneButton = this.getView().byId("done");
-			doneButton.setVisible(false);
+			var oDetailPage = this.getView().getParent().getParent().getParent().getCurrentDetailPage();
+			
+			oDetailPage.removeAllContent();
+			
+			var oView = sap.ui.view({viewName:"storm.view.CustomerUI.AdEdit", type:sap.ui.core.mvc.ViewType.XML});
+			
+			oDetailPage.insertContent(oView);
 		},
 		
 		handleRemovePress:function(){
