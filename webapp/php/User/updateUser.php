@@ -12,7 +12,7 @@
 	$address = $_GET['address'];
 	
 	$tmp = json_encode(sql("SELECT * FROM `user` WHERE email = '$email'"));
-	if ($email = $oldemail){
+	if ($email == $oldemail){
 		$tmp = "[]";
 	}
 	
