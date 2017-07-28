@@ -69,7 +69,6 @@ sap.ui.define([
 
 				}
 			});
-			oOwnerComponent.getTargets().display("customerUi");
 			this._cPopover.destroy();
 			this._cPopover = null;
 		},
