@@ -4,11 +4,16 @@
 		id="list"
 		items="{/ad}"
 		selectionChange="onSelectionChange"
-		includeItemInSelection="true" >
-		<items>
+		includeItemInSelection="true" 
+		mode="SingleSelectMaster"
+		itemPress="handleAddPress">
+		<items
+		itemPress="handleAddPress">
 			<StandardListItem
 				title="{name}"
-				icon="data:image/bmp;base64, {img}"/>
+				icon="data:image/bmp;base64, {img}"
+				type="Active"
+				press="handleAddPress"/>
 		</items>
 	</List>
 </mvc:View>

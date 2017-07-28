@@ -15,7 +15,8 @@ sap.ui.define([
 				data: [
 
 					{
-						email: ""
+						email: "",
+						ad: ""
 					}
 
 				]
