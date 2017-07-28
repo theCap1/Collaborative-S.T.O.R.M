@@ -1,0 +1,84 @@
+{
+		      "Ads":[
+		      			 {
+		                 "counter": 72,
+		                 "name": "apple_music_now"
+		                 },
+		                 {
+		                 "counter": 54,
+		                 "name": "headphones_trademark"
+		                 },
+		                 {
+		                 "counter": 36,
+		                 "name": "mc_fit_the_will_17"
+		                 },
+		                 {
+		                 "counter": 130,
+		                 "name": "new_collection_clothes"
+		                 },
+		                 {
+		                 "counter": 86,
+		                 "name": "odenwald_accessory_15"
+		                 }
+				],
+			"TotalAds":[
+		      			 {
+		                 "counter": 990,
+		                 "month": "jan"
+		                 },
+		                 {
+		                 "counter": 1020,
+		                 "month": "feb"
+		                 },
+		                 {
+		                 "counter": 1080,
+		                 "month": "mar"
+		                 },
+		                 {
+		                 "counter": 1150,
+		                 "month": "apr"
+		                 },
+		                 {
+		                 "counter": 1130,
+		                 "month": "may"
+		                 },
+		                 {
+		                 "counter": 1200,
+		                 "month": "jun"
+		                 },
+		                 {
+		                 "counter": 1450,
+		                 "month": "jul"
+		                 }
+				],
+			"Hitrates":[
+		      			 {
+		                 "Hitrate": 0.8,
+		                 "month": "jan"
+		                 },
+		                 {
+		                 "Hitrate": 0.82,
+		                 "month": "feb"
+		                 },
+		                 {
+		                 "Hitrate": 0.88,
+		                 "month": "mar"
+		                 },
+		                 {
+		                 "Hitrate": 0.94,
+		                 "month": "apr"
+		                 },
+		                 {
+		                 "Hitrate": 0.92,
+		                 "month": "may"
+		                 },
+		                 {
+		                 "Hitrate": 0.95,
+		                 "month": "jun"
+		                 },
+		                 {
+		                 "Hitrate": 0.9,
+		                 "month": "jul"
+		                 }
+				]
+}

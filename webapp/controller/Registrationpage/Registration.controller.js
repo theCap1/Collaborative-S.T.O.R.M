@@ -86,7 +86,7 @@ sap.ui.define(['sap/m/MessageToast', 'sap/ui/core/mvc/Controller', 'sap/ui/model
 										type:"GET",
 										context: this,
 										success: function handleSuccess3(){
-											MessageToast.show("Your account was created successfully!");
+											MessageToast.show("Your account was created successfully and your RFID chip will be shipped soon!");
 											oOwnerComponent.getTargets().display("home");
 										},
 										error:function handleError(){

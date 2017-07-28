@@ -1,0 +1,13 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.tnt" xmlns:m="sap.m" controllerName="storm.controller.CustomerUI.Masterpage" height="100%">
+	<m:Page id="page" showHeader="false">
+		<NavigationList>
+			<NavigationListItem text="Manage Advertisements" icon="sap-icon://building" select="handleManagePress"/>
+			<NavigationListItem text="Dashboards" id="DashboardNav" icon="sap-icon://bbyd-dashboard" select="handleDashboardPress">
+				<NavigationListItem text="Ad comparison" select="handleDashboardConfigPress"/>
+				<NavigationListItem text="Overall hitrate" select="handleDashboard2ConfigPress"/>
+				<NavigationListItem text="Total ads shown" select="handleDashboard3ConfigPress"/>
+			</NavigationListItem>
+			<NavigationListItem text="Contact Us" icon="sap-icon://contacts" select="handleContactUsPress"/>
+		</NavigationList>
+	</m:Page>
+</mvc:View>
