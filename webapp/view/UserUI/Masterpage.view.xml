@@ -32,14 +32,8 @@
 	                icon="sap-icon://employee-pane"
 	                select="handleAccountPress"/>
 	        <NavigationListItem
-	                text="Settings"
-	                icon="sap-icon://settings"/>
-	        <NavigationListItem
 	                text="Contact us"
 	                icon="sap-icon://letter"/>
-	        <NavigationListItem
-	                text="Help"
-	                icon="sap-icon://question-mark"/>
 	    </NavigationList>
     </m:Page>
 </mvc:View>
