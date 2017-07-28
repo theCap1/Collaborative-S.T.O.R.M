@@ -85,10 +85,10 @@ sap.ui.define([
 							context: this,
 							success: function handleSuccess(response){
 								if (response === "success"){
-									MessageToast.show("Congratulations! The voucher was added to your voucher list.");
+									MessageToast.show("Congratulations! The voucher was added to your voucher list. :)");
 									oView.byId("accBalance").setText(oView.byId("accBalance").getText()-sVoucherPrice);
 								}else{
-									MessageToast.show("Ups, something went wrong with the transmission of your data. Please contact the support. :(");
+									MessageToast.show("Ups, it seems like you don't have enough credits for this voucher. :(");
 								}
 							},
 							error:function handleError(){
